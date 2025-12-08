@@ -5,23 +5,24 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("t_lang", Schema = "quran_quran2")]
+//[Table("t_lang", Schema = "quran_quran2")]
 [Index("Id", Name = "id")]
 public partial class TLang
 {
-    [Column("lang")]
+    [OldName("lang")]
     public string Lang { get; set; }
 
-    [Column("sura")]
+    [OldName("sura")]
     public string Sura { get; set; }
 
-    [Column("name")]
+    [OldName("name")]
     public string Name { get; set; }
 
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 }

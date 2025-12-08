@@ -23,7 +23,7 @@ public partial class MultimediaCategory
     public string Description { get; set; }
 
     [OldName("view")]
-    [Column("view")]
+    // [Column("view")]
     public int? View { get; set; }
 
     [OldName("photo")]

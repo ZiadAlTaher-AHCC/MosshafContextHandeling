@@ -5,73 +5,89 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
- 
+[OldName("Quran")]
 public partial class Quran
 {
     /// <summary>
     /// old name: id
     /// </summary>
+    [OldName("id")]
     public int? Id { get; set; }
 
     /// <summary>
     /// old name: QuranID
     /// </summary>
-    public int? QuranId { get; set; }
+    [OldName("QuranID")]
+    public int? QuranId { get; set; }  
 
     /// <summary>
     /// old name: verse
     /// </summary>
+    [OldName("verse")]
     public string Verse { get; set; }
 
     /// <summary>
     /// old name: verseNoSign
     /// </summary>
+    [OldName("verseNoSign")]
     public string VerseNoSign { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
 
     /// <summary>
     /// old name: hezbNo
     /// </summary>
+    [OldName("hezbNo")]
     public int? HezbNo { get; set; }
 
     /// <summary>
     /// old name: rob3No
     /// </summary>
-    public int? Rob3No { get; set; }
-
+    [OldName("rob3No")]
+    public int? RobNo { get; set; }
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
+    [OldName("VerseNoAr")]
     public string VerseNoAr { get; set; }
-    public int? SuraNo { get; set; }
+    [OldName("SuraNo")]
+    public int? SuraNo { get; set; } // Navigation property to Sura
+    [OldName("SuraName")]
     public string SuraName { get; set; }
 
     /// <summary>
     /// old name: sound
     /// </summary>
+    [OldName("sound")]
     public string Sound { get; set; }
 
     /// <summary>
     /// old name: img_warsh
     /// </summary>
+    [OldName("img_warsh")]
     public string ImgWarsh { get; set; }
 
     /// <summary>
     /// old name: search_ayaa
     /// </summary>
+    [OldName("search_ayaa")]
     public string SearchAyaa { get; set; }
 
     /// <summary>
     /// old name: verse3_old
     /// </summary>
-    public string Verse3Old { get; set; }
+    [OldName("verse3_old")]
+    public string VerseOld { get; set; }
 
     /// <summary>
     /// old name: 2verse
     /// </summary>
-    public string _2verse { get; set; }
+    [OldName("2verse")]
+    public string  verse { get; set; }
 }

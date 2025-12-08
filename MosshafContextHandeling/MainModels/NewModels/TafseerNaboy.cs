@@ -5,36 +5,37 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("tafseer_naboy", Schema = "quran_quran2")]
+//[Table("tafseer_naboy", Schema = "quran_quran2")]
 public partial class TafseerNaboy
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
-
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
-    [Column("selid")]
+    [OldName("selid")]
     public int? Selid { get; set; }
-
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
-    [Column("taraf")]
+    [OldName("taraf")]
     public string Taraf { get; set; }
 
-    [Column("book_name")]
+    [OldName("book_name")]
     [StringLength(100)]
     public string BookName { get; set; }
 
-    [Column("hadith_txt")]
+    [OldName("hadith_txt")]
     public string HadithTxt { get; set; }
 
-    [Column("hadith_search")]
+    [OldName("hadith_search")]
     public string HadithSearch { get; set; }
 
-    [Column("status")]
+    [OldName("status")]
     public int? Status { get; set; }
 }

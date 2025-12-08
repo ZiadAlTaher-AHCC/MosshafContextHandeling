@@ -30,5 +30,6 @@ public partial class Mogam
     public string Text { get; set; }// TODO : what is this column for ?
 
     [OldName("book_id")]
-    public int? BookId { get; set; }
+    public int? BookId { get; set; } // TODO : this is foreign key to which table ?
+                                     // public  MogamBook? Book { get; set; } // Navigation property
 }

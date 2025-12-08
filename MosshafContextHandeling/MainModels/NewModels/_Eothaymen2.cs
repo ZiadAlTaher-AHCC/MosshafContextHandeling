@@ -10,21 +10,21 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// <summary>
 ///     3othaymen2
 /// </summary>
-[Table("Eothaymen2" )]
+//[Table("Eothaymen2" )]
 public partial class Eothaymen2
 {
     [Key]
-    [Column("id")]
+ 
     public int Id { get; set; }
 
     [Required]
-    [Column("nass")]
+ 
     public string Nass { get; set; }
 
     [Required]
-    [Column("title")]
+ 
     public string Title { get; set; }
 
-    [Column("pageid")]
+ 
     public int Pageid { get; set; }
 }

@@ -5,50 +5,51 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("tafseer_pages", Schema = "quran_quran2")]
+//[Table("tafseer_pages", Schema = "quran_quran2")]
 public partial class TafseerPage
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [Column("tafseer_book")]
+    [OldName("tafseer_book")]
     [StringLength(200)]
-    public string TafseerBook { get; set; }
+    public string TafseerBook { get; set; } 
 
-    [Column("page_no")]
+    [OldName("page_no")]
     public int PageNo { get; set; }
 
-    [Column("verse_no")]
+    [OldName("verse_no")]
     public int VerseNo { get; set; }
 
-    [Column("verse_count")]
+    [OldName("verse_count")]
     public int VerseCount { get; set; }
 
-    [Column("sura_no")]
-    public int SuraNo { get; set; }
+    [OldName("sura_no")]
+    public int SuraNo { get; set; } // navigation property to Sura
 
     [Required]
-    [Column("sura_name")]
+    [OldName("sura_name")]
     [StringLength(500)]
     public string SuraName { get; set; }
 
-    [Column("repater")]
+    [OldName("repater")]
     public short Repater { get; set; }
 
-    [Column("m_pageno")]
+    [OldName("m_pageno")]
     public int MPageno { get; set; }
 
-    [Column("m_quranid")]
+    [OldName("m_quranid")]
     public int MQuranid { get; set; }
 
-    [Column("cheak_repater")]
+    [OldName("cheak_repater")]
     public int CheakRepater { get; set; }
 
-    [Column("updateTime", TypeName = "datetime")]
+    [OldName("updateTime")]
     public DateTime UpdateTime { get; set; }
 }

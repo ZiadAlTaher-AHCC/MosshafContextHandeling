@@ -5,34 +5,35 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("tafseer_english", Schema = "quran_quran2")]
+//[Table("tafseer_english", Schema = "quran_quran2")]
 public partial class TafseerEnglish
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("QuranID")]
-    public int? QuranId { get; set; }
-
+    [OldName("QuranID")]
+    public int? QuranId { get; set; } // foreign key to Quran
+    [OldName("Verse")]
     public string Verse { get; set; }
 
-    [Column("GVerse")]
+    [OldName("GVerse")]
     public string Gverse { get; set; }
-
+    [OldName("AlJalalain")]
     public string AlJalalain { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
-
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
     [StringLength(50)]
     public string SuraName { get; set; }
-
-    public int? SuraNo { get; set; }
+    [OldName("SuraNo")]
+    public int? SuraNo { get; set; } // navigation property to Sura
 }

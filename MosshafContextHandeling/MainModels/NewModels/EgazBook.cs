@@ -11,7 +11,7 @@ using MosshafContextHandeling.Models;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("e3gaz_book")]
-// [Table("e3gaz_book")]
+// //[Table("e3gaz_book")]
 // [Index("Feature", Name = "feature")]
 // [Index("Id", Name = "id")]
 public partial class EgazBook

@@ -10,7 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("asbab")]
-[Table("asbab" )]
+//[Table("asbab" )]
 [Index("PageNo", Name = "PageNo")]
 [Index("QuranId", Name = "QuranID")]
 [Index("SuraNo", Name = "SuraNo")]
@@ -18,7 +18,7 @@ public partial class Asbab
 {
     [OldName("QuranID")]
     [Key]
-    [Column("QuranID")]
+   
     public int QuranId { get; set; }
 
     [OldName("PageNo")]
@@ -37,17 +37,17 @@ public partial class Asbab
 
     [OldName("lebab")]
     [Required]
-    [Column("lebab")]
+ 
     public string Lebab { get; set; }
 
     [OldName("mosnad")]
     [Required]
-    [Column("mosnad")]
+  
     public string Mosnad { get; set; }
 
     [OldName("verse")]
     [Required]
-    [Column("verse")]
+ 
     public string Verse { get; set; }
     
     /// <summary>
@@ -55,7 +55,7 @@ public partial class Asbab
     /// </summary>
     [OldName("3egab")]
     [Required]
-    [Column("Eegab")]
+ 
     public string Eegab { get; set; }
     
     /// <summary>
@@ -63,7 +63,7 @@ public partial class Asbab
     /// </summary>
     [OldName("esti3ab")]
     [Required]
-    [Column("Esteaab")]
+ 
     public string Esteaab { get; set; }
 
     /// <summary>
@@ -71,6 +71,6 @@ public partial class Asbab
     /// </summary>
     [OldName("mo7arrer")]
     [Required]
-    [Column("Moharrer")]
+ 
     public string Moharrer { get; set; }
 }

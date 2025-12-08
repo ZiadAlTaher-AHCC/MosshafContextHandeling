@@ -11,7 +11,7 @@ using MosshafContextHandeling.Models;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("E3gazBab")]
-// [Table("e3gaz_bab")]
+// //[Table("e3gaz_bab")]
 // [Index("BabId", Name = "bab_id")]
 // [Index("ChapterId", Name = "chapter_id")]
 // [Index("E3gazBookId", Name = "e3gaz_book_id")]

@@ -5,38 +5,42 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("sura_sound", Schema = "quran_quran2")]
+//[Table("sura_sound", Schema = "quran_quran2")]
 public partial class SuraSound
 {
     [Key]
+    [OldName("SuraNo")]
     public long SuraNo { get; set; }
 
     [StringLength(50)]
+    [OldName("SuraName")]
     public string SuraName { get; set; }
-
+    [OldName("Verses")]
     public int? Verses { get; set; }
 
     [Required]
+    [OldName("Type")]
     [StringLength(255)]
     public string Type { get; set; }
 
     [Required]
-    [Column("title")]
+    [OldName("title")]
     [StringLength(255)]
     public string Title { get; set; }
 
-    [Column("no_of_words")]
+    [OldName("no_of_words")]
     public int NoOfWords { get; set; }
 
-    [Column("no_of_letters")]
+    [OldName("no_of_letters")]
     public int NoOfLetters { get; set; }
 
-    [Column("no_of_ghonna")]
+    [OldName("no_of_ghonna")]
     public int NoOfGhonna { get; set; }
 
-    [Column("no_of_glala")]
+    [OldName("no_of_glala")]
     public int NoOfGlala { get; set; }
 }

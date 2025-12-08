@@ -5,23 +5,25 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("olom_chapters", Schema = "quran_quran2")]
+//[Table("olom_chapters", Schema = "quran_quran2")]
+[OldName("OlomChapter")]
 public partial class OlomChapter
 {
-    [Column("id")]
+    [OldName("Id")]
     public int? Id { get; set; }
 
-    [Column("name")]
+    [OldName("Name")]
     [StringLength(255)]
     public string Name { get; set; }
 
-    [Column("olom_book_id")]
-    public int? OlomBookId { get; set; }
+    [OldName("OlomBookId")]
+    public int? OlomBookId { get; set; } // foreign key to OlomBook
 
-    [Column("chapter_id")]
-    public int? ChapterId { get; set; }
+    [OldName("ChapterId")]
+    public int? ChapterId { get; set; } // foreign key to Chapter
 }

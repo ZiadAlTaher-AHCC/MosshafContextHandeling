@@ -13,7 +13,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// old name : e3gaz_chapters
 /// </summary>
 [OldName("e3gaz_chapters")]
-// [Table("e3gaz_chapters")]
+// //[Table("e3gaz_chapters")]
 // [Index("ChapterId", Name = "chapter_id")]
 // [Index("E3gazBookId", Name = "hadith_bab_id_idx")]
 public partial class EgazChapter
@@ -24,7 +24,7 @@ public partial class EgazChapter
 
     [OldName("name")]
     [Required]
-    [Column("name")]
+ 
     [StringLength(255)]
     public string Name { get; set; }
     
@@ -32,7 +32,7 @@ public partial class EgazChapter
     public int EgazBookId { get; set; }
     
     [OldName("chapter_id")]
-    [Column("chapter_id")]
+ 
     public int EgazChapterId { get; set; }
 
     //[ForeignKey(nameof(EgazBookId))]

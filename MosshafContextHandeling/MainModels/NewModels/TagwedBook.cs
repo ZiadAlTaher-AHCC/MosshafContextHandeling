@@ -5,19 +5,20 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("tagwed_book", Schema = "quran_quran2")]
+//[Table("tagwed_book", Schema = "quran_quran2")]
 public partial class TagwedBook
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("book")]
+    [OldName("book")]
     public string Book { get; set; }
 
-    [Column("Field_q")]
+    [OldName("Field_q")]
     public string FieldQ { get; set; }
 }

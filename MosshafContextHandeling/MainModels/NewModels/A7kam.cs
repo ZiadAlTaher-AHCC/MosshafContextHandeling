@@ -13,18 +13,18 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// </summary>
 [OldName("A7kam")]
 [Keyless]
-[Table("ahkam" )]
+//[Table("ahkam" )]
 public partial class Ahkam
 {
     [OldName("QuranID")]
-    [Column("QuranID")]
+ 
     public int? QuranId { get; set; }
 
     [OldName("Verse")]
     public string Verse { get; set; }
 
     [OldName("GVerse")]
-    [Column("GVerse")]
+   
     public string Gverse { get; set; }
 
     [OldName("Meaning1")]
@@ -55,78 +55,78 @@ public partial class Ahkam
     [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
-    [OldName("tabary")]
-    [Column("tabary")]
-    public string Tabary { get; set; }
+    //[OldName("tabary")]
+    //// [Column("tabary")]
+    //public string Tabary { get; set; }
 
-    [OldName("kortoby")]
-    [Column("kortoby")]
-    public string Kortoby { get; set; }
+    //[OldName("kortoby")]
+    //// [Column("kortoby")]
+    //public string Kortoby { get; set; }
 
-    [OldName("safwa")]
-    [Column("safwa")]
-    public string Safwa { get; set; }
+    //[OldName("safwa")]
+    //// [Column("safwa")]
+    //public string Safwa { get; set; }
 
     [OldName("ibnkathir")]
-    [Column("ibnkathir")]
+ 
     public string Ibnkathir { get; set; }
 
-    [OldName("kashaf")]
-    [Column("kashaf")]
-    public string Kashaf { get; set; }
+    //[OldName("kashaf")]
+    //// [Column("kashaf")]
+    //public string Kashaf { get; set; }
 
     [OldName("zelal")]
-    [Column("zelal")]
+ 
     public string Zelal { get; set; }
 
     [OldName("sa3dy")]
-    [Column("sa3dy")]
+ 
     public string Saady { get; set; } 
 
     [OldName("kadeer")]
-    [Column("kadeer")]
+ 
     public string Kadeer { get; set; }
 
     [OldName("wa7dy")]
-    [Column("wa7dy")]
+ 
     public string Wahdy { get; set; }
     
     [OldName("id")]
     [Key]
-    [Column("id")]
+     
     public int Id { get; set; }
 
     [OldName("araby")]
     [Required]
-    [Column("araby")]
+  
     public string Araby { get; set; }
 
     [OldName("gasas")]
     [Required]
-    [Column("gasas")]
+ 
     public string Gasas { get; set; }
 
     [OldName("rwaee")]
     [Required]
-    [Column("rwaee")]
+   
     public string Rwaee { get; set; } //TODO: Referes to what 
 
-    [OldName("gah")]
-    [Required]
-    [Column("gah")]
-    public string Gah { get; set; } //TODO: Referes to what 
+    //[OldName("gah")]
+    //[Required]
+    //// [Column("gah")]
+    //public string Gah { get; set; } //TODO: Referes to what 
 
     [OldName("maram")]
     [Required]
-    [Column("maram")]
+ 
     public string Maram { get; set; }
 
     [OldName("kia")]
     [Required]
-    [Column("kia")]
+ 
     public string Kia { get; set; } //TODO: Referes to what 
 
     [OldName("make")]
-    [Column("make")]
+ 
     public int Make { get; set; } //TODO: Referes to what 
 }

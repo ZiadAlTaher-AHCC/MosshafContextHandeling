@@ -5,21 +5,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("warsh", Schema = "quran_quran2")]
+//[Table("warsh", Schema = "quran_quran2")]
 public partial class Warsh
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("page_id")]
+    [OldName("page_id")]
     [StringLength(100)]
     public string PageId { get; set; }
 
-    [Column("image")]
+    [OldName("image")]
     [StringLength(100)]
     public string Image { get; set; }
 }

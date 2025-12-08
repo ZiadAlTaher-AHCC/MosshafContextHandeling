@@ -5,26 +5,27 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("sverse", Schema = "quran_quran2")]
+//[Table("sverse", Schema = "quran_quran2")]
 public partial class Sverse
 {
     [Key]
-    [Column("sverseNo")]
+    [OldName("sverseNo")]
     public long SverseNo { get; set; }
 
-    [Column("sverseName")]
+    [OldName("sverseName")]
     [StringLength(50)]
     public string SverseName { get; set; }
-
+    [OldName("Verses")]
     public int? Verses { get; set; }
-
+    [OldName("Type")]
     [StringLength(255)]
     public string Type { get; set; }
 
-    [Column("title")]
+    [OldName("title")]
     [StringLength(255)]
     public string Title { get; set; }
 }

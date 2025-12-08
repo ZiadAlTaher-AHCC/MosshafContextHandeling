@@ -5,28 +5,29 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("reciters", Schema = "quran_quran2")]
+//[Table("reciters", Schema = "quran_quran2")]
 public partial class Reciter
 {
     [Key]
-    [Column("ReciterID")]
+    [OldName("ReciterID")]
     public int ReciterId { get; set; }
 
     [Required]
-    [Column("ar_name")]
+    [OldName("ar_name")]
     public string ArName { get; set; }
 
     [Required]
-    [Column("en_name")]
+    [OldName("en_name")]
     public string EnName { get; set; }
 
     [Required]
-    [Column("folder")]
+    [OldName("folder")]
     public string Folder { get; set; }
 
-    [Column("karat")]
-    public int Karat { get; set; }
+    [OldName("karat")]
+    public int Karat { get; set; } // nivgation property to reciter_karat
 }

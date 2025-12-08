@@ -34,11 +34,12 @@ public partial class Kerat
     [StringLength(50)]
     public string SuraName { get; set; }
 
+   
     [OldName("SuraNo")]
-    public int? SuraNo { get; set; }
+    public int? SuraNo { get; set; } //TODO:  is this a foreign key to Sura table 
 
-    [OldName("ma3any")]
-    public string Maany { get; set; } //TODO: there is no data in this column except QuranID 4278, 4283, 4284, 4286 
+    //[OldName("ma3any")]
+    //public string Maany { get; set; } //TODO: there is no data in this column except QuranID 4278, 4283, 4284, 4286 
 
     // Navigation Property to Quran
     //[ForeignKey(nameof(QuranId))]

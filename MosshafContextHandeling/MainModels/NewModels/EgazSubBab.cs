@@ -12,7 +12,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// old name: e3gaz_sub_bab
 /// </summary>
 [OldName("e3gaz_sub_bab")]
-[Table("e3gaz_sub_bab")]
+//[Table("e3gaz_sub_bab")]
 // [Index("BabId", Name = "bab_id")]
 // [Index("ChapterId", Name = "chapter_id")]
 // [Index("E3gazBookId", Name = "e3gaz_book_id")]
@@ -22,11 +22,11 @@ public partial class EgazSubBab
 {
     [OldName("id")]
     [Key]
-    [Column("id")]
+    // [Column("id")]
     public int Id { get; set; }
 
     [OldName("chapter_id")]
-    [Column("chapter_id")]
+    // [Column("chapter_id")]
     public int ChapterId { get; set; }
 
     /// <summary>

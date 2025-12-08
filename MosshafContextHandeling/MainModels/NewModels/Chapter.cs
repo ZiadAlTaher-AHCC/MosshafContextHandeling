@@ -10,7 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("chapter")]
-[Table("chapter")]
+//[Table("chapter")]
 public partial class Chapter
 {
     [OldName("id")]

@@ -10,21 +10,21 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// <summary>
 /// old name ""_3egab""
 /// </summary>
-[Table("Eegab" )]
+//[Table("Eegab" )]
 public partial class _Eegab
 {
     [Key]
-    [Column("id")]
+ 
     public int Id { get; set; }
 
     [Required]
-    [Column("nass")]
+ 
     public string Nass { get; set; }
 
     [Required]
-    [Column("title")]
+ 
     public string Title { get; set; }
 
-    [Column("pageid")]
+ 
     public int Pageid { get; set; }
 }

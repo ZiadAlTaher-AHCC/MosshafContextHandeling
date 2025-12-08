@@ -5,29 +5,30 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("words", Schema = "quran_quran2")]
+//[Table("words", Schema = "quran_quran2")]
 public partial class Word
 {
-    [Column("wordid")]
+    [OldName("wordid")]
     public int? Wordid { get; set; }
 
-    [Column("title")]
+    [OldName("title")]
     [StringLength(255)]
     public string Title { get; set; }
 
-    [Column("sura_id")]
-    public int? SuraId { get; set; }
+    [OldName("sura_id")]
+    public int? SuraId { get; set; } // foreign key to sura.sura_id
 
-    [Column("QuranID")]
-    public int? QuranId { get; set; }
+    [OldName("QuranID")]
+    public int? QuranId { get; set; } // foreign key to quran.quran_id
 
-    [Column("score")]
+    [OldName("score")]
     public int? Score { get; set; }
 
-    [Column("pageno")]
+    [OldName("pageno")]
     public int? Pageno { get; set; }
 }

@@ -5,41 +5,42 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("tafseer_book", Schema = "quran_quran2")]
+//[Table("tafseer_book", Schema = "quran_quran2")]
 [Index("Feature", Name = "feature")]
 public partial class TafseerBook
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [Column("book")]
+    [OldName("book")]
     public string Book { get; set; }
 
     [Required]
-    [Column("Field_q")]
+    [OldName("Field_q")]
     public string FieldQ { get; set; }
 
     [Required]
-    [Column("details")]
+    [OldName("details")]
     public string Details { get; set; }
 
-    [Column("feature")]
+    [OldName("feature")]
     public int Feature { get; set; }
 
-    [Column("date")]
+    [OldName("date")]
     public int Date { get; set; }
 
-    [Column("type")]
+    [OldName("type")]
     public int Type { get; set; }
 
-    [Column("active")]
+    [OldName("active")]
     public short Active { get; set; }
 
-    [Column("books_full")]
+    [OldName("books_full")]
     public short BooksFull { get; set; }
 }

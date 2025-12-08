@@ -5,52 +5,54 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("sura", Schema = "quran_quran2")]
+////[Table("sura", Schema = "quran_quran2")]
 public partial class Sura
 {
+    [OldName("SuraNo")]
     [Key]
     public long SuraNo { get; set; }
-
+    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
 
     public int? Verses { get; set; }
-
+    [OldName("Type")]
     [Required]
     [StringLength(255)]
     public string Type { get; set; }
 
     [Required]
-    [Column("title")]
+    [OldName("title")]
     [StringLength(255)]
     public string Title { get; set; }
 
-    [Column("karat_type")]
+    [OldName("karat_type")]
     public int KaratType { get; set; }
 
-    [Column("master")]
+    [OldName("master")]
     public int Master { get; set; }
 
     [Required]
-    [Column("sabb_tasmia")]
+    [OldName("sabb_tasmia")]
     public string SabbTasmia { get; set; }
 
     [Required]
-    [Column("ta3reef")]
-    public string Ta3reef { get; set; }
+    [OldName("ta3reef")]
+    public string Taareef { get; set; }
 
     [Required]
-    [Column("mwadee3")]
-    public string Mwadee3 { get; set; }
+    [OldName("mwadee3")]
+    public string Mwadee { get; set; }
 
     [Required]
-    [Column("sabb_nzol")]
+    [OldName("sabb_nzol")]
     public string SabbNzol { get; set; }
 
     [Required]
-    [Column("fadl")]
-    public string Fadl { get; set; }
+    [OldName("fadl")]
+    public string Fadl { get; set; } // TODO: For what?
 }

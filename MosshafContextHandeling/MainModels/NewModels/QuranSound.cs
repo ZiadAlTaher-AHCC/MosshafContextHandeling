@@ -5,69 +5,70 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("quran_sound", Schema = "quran_quran2")]
+////[Table("quran_sound", Schema = "quran_quran2")]
 public partial class QuranSound
 {
-    [Column("QuranID")]
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
-    [Column("verse3_old")]
-    public string Verse3Old { get; set; }
+    [OldName("verse3_old")]
+    public string VerseOld { get; set; }
 
-    [Column("verseNoSign")]
+    [OldName("verseNoSign")]
     public string VerseNoSign { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
 
-    [Column("hezbNo")]
+    [OldName("HezbNo")]
     public int? HezbNo { get; set; }
 
-    [Column("rob3No")]
-    public int? Rob3No { get; set; }
-
+    [OldName("rob3No")]
+    public int? RobNo { get; set; }
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-
+    [OldName("VerseNoAr")]
     public string VerseNoAr { get; set; }
-
-    public int? SuraNo { get; set; }
-
+    [OldName("SuraNo")]
+    public int? SuraNo { get; set; } // navigation property to Sura
+    [OldName("SuraName")]
     [StringLength(250)]
     public string SuraName { get; set; }
 
-    [Column("sound")]
+    [OldName("sound")]
     [StringLength(10)]
     public string Sound { get; set; }
 
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("2verse")]
-    public string _2verse { get; set; }
+    [OldName("2verse")]
+    public string verse { get; set; }
 
-    [Column("verse")]
+    [OldName("verse")]
     public string Verse { get; set; }
 
-    [Column("search_ayaa")]
+    [OldName("search_ayaa")]
     public string SearchAyaa { get; set; }
 
-    [Column("no_of_words")]
+    [OldName("no_of_words")]
     public int? NoOfWords { get; set; }
 
-    [Column("no_of_letters")]
+    [OldName("no_of_letters")]
     public int? NoOfLetters { get; set; }
 
-    [Column("no_of_haraka")]
+    [OldName("no_of_haraka")]
     public int? NoOfHaraka { get; set; }
 
-    [Column("no_of_ghonna")]
+    [OldName("no_of_ghonna")]
     public int? NoOfGhonna { get; set; }
 
-    [Column("no_of_glala")]
+    [OldName("no_of_glala")]
     public int? NoOfGlala { get; set; }
 }

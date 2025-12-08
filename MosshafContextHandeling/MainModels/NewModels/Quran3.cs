@@ -5,127 +5,128 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("quran3", Schema = "quran_quran2")]
+////[Table("quran3", Schema = "quran_quran2")]
 public partial class Quran3
 {
-    [Column("QuranID")]
-    public int? QuranId { get; set; }
+    [OldName("QuranID")]
+    public int? QuranId { get; set; } // primary key
 
     public string Verse { get; set; }
 
-    [Column("GVerse")]
+    [OldName("GVerse")]
     public string Gverse { get; set; }
 
-    [Column("sverse")]
+    [OldName("Sverse")]
     public string Sverse { get; set; }
-
+    [OldName("Meaning1")]
     public string Meaning1 { get; set; }
-
+    [OldName("Meaning2")]
     public string Meaning2 { get; set; }
-
+    [OldName("English")]
     public string English { get; set; }
-
+    [OldName("Germany")]
     public string Germany { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
-
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-
+    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
+    [OldName("SuraNo")]
+    public int? SuraNo { get; set; } // navigation property to Sura
 
-    public int? SuraNo { get; set; }
-
-    [Column("tabary")]
+    [OldName("tabary")]
     public string Tabary { get; set; }
 
-    [Column("kortoby")]
+    [OldName("kortoby")]
     public string Kortoby { get; set; }
 
-    [Column("safwa")]
+    [OldName("safwa")]
     public string Safwa { get; set; }
 
-    [Column("ibnkathir")]
+    [OldName("ibnkathir")]
     public string Ibnkathir { get; set; }
 
-    [Column("kashaf")]
+    [OldName("kashaf")]
     public string Kashaf { get; set; }
 
-    [Column("zelal")]
+    [OldName("zelal")]
     public string Zelal { get; set; }
 
-    [Column("sa3dy")]
-    public string Sa3dy { get; set; }
+    [OldName("sa3dy")]
+    public string Sady { get; set; }
 
-    [Column("kadeer")]
+    [OldName("kadeer")]
     public string Kadeer { get; set; }
 
-    [Column("wa7dy")]
-    public string Wa7dy { get; set; }
+    [OldName("wa7dy")]
+    public string Wahdy { get; set; }
 
-    [Column("short_ibnkathir")]
+    [OldName("short_ibnkathir")]
     public string ShortIbnkathir { get; set; }
 
-    [Column("sha3rawy")]
-    public string Sha3rawy { get; set; }
+    [OldName("sha3rawy")]
+    public string Sharawy { get; set; }
 
-    [Column("mo7et")]
-    public string Mo7et { get; set; }
+    [OldName("mo7et")]
+    public string Mohet { get; set; }
 
-    [Column("aysar")]
+    [OldName("aysar")]
     public string Aysar { get; set; }
 
-    [Column("ba3awy")]
-    public string Ba3awy { get; set; }
+    [OldName("ba3awy")]
+    public string Baawy { get; set; }
 
-    [Column("nasafy")]
+    [OldName("nasafy")]
     public string Nasafy { get; set; }
 
-    [Column("mawrdy")]
+    [OldName("mawrdy")]
     public string Mawrdy { get; set; }
 
-    [Column("montkab")]
+    [OldName("montkab")]
     public string Montkab { get; set; }
 
-    [Column("hatem")]
+    [OldName("hatem")]
     public string Hatem { get; set; }
 
-    [Column("bnothemen")]
+    [OldName("bnothemen")]
     public string Bnothemen { get; set; }
 
-    [Column("mafateh")]
+    [OldName("mafateh")]
     public string Mafateh { get; set; }
 
-    [Column("mara7")]
-    public string Mara7 { get; set; }
+    [OldName("mara7")]
+    public string Marah { get; set; }
 
-    [Column("mokatel")]
+    [OldName("mokatel")]
     public string Mokatel { get; set; }
 
-    [Column("adwa")]
+    [OldName("adwa")]
     public string Adwa { get; set; }
 
-    [Column("baedawy")]
+    [OldName("baedawy")]
     public string Baedawy { get; set; }
 
-    [Column("waseet")]
+    [OldName("waseet")]
     public string Waseet { get; set; }
 
-    [Column("alosy")]
+    [OldName("alosy")]
     public string Alosy { get; set; }
 
-    [Column("ezzsalam")]
+    [OldName("ezzsalam")]
     public string Ezzsalam { get; set; }
 
-    [Column("qatan")]
+    [OldName("qatan")]
     public string Qatan { get; set; }
 
-    [Column("ta7reer")]
-    public string Ta7reer { get; set; }
+    [OldName("ta7reer")]
+    public string Tareer { get; set; }
 }

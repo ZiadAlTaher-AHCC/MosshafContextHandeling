@@ -5,37 +5,38 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("tagwed", Schema = "quran_quran2")]
+//[Table("tagwed", Schema = "quran_quran2")]
 public partial class Tagwed
 {
-    [Column("QuranID")]
-    public int? QuranId { get; set; }
-
+    [OldName("QuranID")]
+    public int? QuranId { get; set; } // Foreign Key to Quran.ID
+    [OldName("Verse")]
     public string Verse { get; set; }
 
-    [Column("GVerse")]
+    [OldName("GVerse")]
     public string Gverse { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
-
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-
+    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
-
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
     [Required]
-    [Column("tagwed")]
+    [OldName("tagwed")]
     public string Tagwed1 { get; set; }
 
     [Required]
-    [Column("tagen")]
+    [OldName("tagen")]
     public string Tagen { get; set; }
 }

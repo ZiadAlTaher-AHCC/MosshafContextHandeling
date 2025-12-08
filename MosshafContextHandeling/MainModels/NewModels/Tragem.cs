@@ -5,170 +5,171 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-[Table("tragem", Schema = "quran_quran2")]
+//[Table("tragem", Schema = "quran_quran2")]
 public partial class Tragem
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("QuranID")]
-    public int? QuranId { get; set; }
+    [OldName("QuranID")]
+    public int? QuranId { get; set; } // navigation key to Quran table
 
     public string Verse { get; set; }
 
-    [Column("GVerse")]
+    [OldName("GVerse")]
     public string Gverse { get; set; }
 
     public string English { get; set; }
 
-    [Column("english2")]
+    [OldName("english2")]
     public string English2 { get; set; }
 
-    [Column("Eng_Ahmed_Ali")]
+    [OldName("Eng_Ahmed_Ali")]
     public string EngAhmedAli { get; set; }
 
-    [Column("Eng_Yusuf_Ali")]
+    [OldName("Eng_Yusuf_Ali")]
     public string EngYusufAli { get; set; }
 
-    [Column("Eng_Qarai")]
+    [OldName("Eng_Qarai")]
     public string EngQarai { get; set; }
 
-    [Column("Eng_Ahmed_Raza_Khan")]
+    [OldName("Eng_Ahmed_Raza_Khan")]
     public string EngAhmedRazaKhan { get; set; }
 
-    [Column("Eng_Arberry")]
+    [OldName("Eng_Arberry")]
     public string EngArberry { get; set; }
 
-    [Column("Eng_Asad")]
+    [OldName("Eng_Asad")]
     public string EngAsad { get; set; }
 
-    [Column("Eng_Daryabadi")]
+    [OldName("Eng_Daryabadi")]
     public string EngDaryabadi { get; set; }
 
-    [Column("Eng_Hilali_And_Khan")]
+    [OldName("Eng_Hilali_And_Khan")]
     public string EngHilaliAndKhan { get; set; }
 
-    [Column("Eng_ClearQuran_God")]
+    [OldName("Eng_ClearQuran_God")]
     public string EngClearQuranGod { get; set; }
 
-    [Column("Eng_ClearQuran_Allah")]
+    [OldName("Eng_ClearQuran_Allah")]
     public string EngClearQuranAllah { get; set; }
 
-    [Column("Eng_Community_God")]
+    [OldName("Eng_Community_God")]
     public string EngCommunityGod { get; set; }
 
-    [Column("Eng_Community_Allah")]
+    [OldName("Eng_Community_Allah")]
     public string EngCommunityAllah { get; set; }
 
-    [Column("Eng_Khattab")]
+    [OldName("Eng_Khattab")]
     public string EngKhattab { get; set; }
 
-    [Column("Eng_Maududi")]
+    [OldName("Eng_Maududi")]
     public string EngMaududi { get; set; }
 
-    [Column("Eng_Mubarakpuri")]
+    [OldName("Eng_Mubarakpuri")]
     public string EngMubarakpuri { get; set; }
 
-    [Column("Eng_Pickthall")]
+    [OldName("Eng_Pickthall")]
     public string EngPickthall { get; set; }
 
-    [Column("Eng_Sarwar")]
+    [OldName("Eng_Sarwar")]
     public string EngSarwar { get; set; }
 
-    [Column("Eng_Qaribullah_And_Darwish")]
+    [OldName("Eng_Qaribullah_And_Darwish")]
     public string EngQaribullahAndDarwish { get; set; }
-
+    [OldName("Germany")]
     public string Germany { get; set; }
-
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
-
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-
+    [OldName("SuraName")]
     public string SuraName { get; set; }
+    [OldName("SuraNo")]
+    public int? SuraNo { get; set; } // navigation property to Sura
 
-    public int? SuraNo { get; set; }
-
-    [Column("japanese")]
+    [OldName("japanese")]
     public string Japanese { get; set; }
 
-    [Column("chinese")]
+    [OldName("chinese")]
     public string Chinese { get; set; }
 
-    [Column("italy")]
+    [OldName("italy")]
     public string Italy { get; set; }
 
-    [Column("fr")]
+    [OldName("fr")]
     public string Fr { get; set; }
 
-    [Column("fr2")]
-    public string Fr2 { get; set; }
+    [OldName("fr2")]
+    public string Fr2 { get; set; } // todo : what is the difference between fr and fr2?
 
-    [Column("indo")]
+    [OldName("indo")]
     public string Indo { get; set; }
 
-    [Column("kory")]
+    [OldName("kory")]
     public string Kory { get; set; }
 
-    [Column("sa7ly")]
-    public string Sa7ly { get; set; }
+    [OldName("sa7ly")]
+    public string Sahly { get; set; }
 
-    [Column("rusha")]
+    [OldName("rusha")]
     public string Rusha { get; set; }
 
-    [Column("alb")]
+    [OldName("alb")]
     public string Alb { get; set; }
 
-    [Column("sp")]
+    [OldName("sp")]
     public string Sp { get; set; }
 
-    [Column("hendi")]
+    [OldName("hendi")]
     public string Hendi { get; set; }
 
-    [Column("malawy")]
+    [OldName("malawy")]
     public string Malawy { get; set; }
 
-    [Column("polg")]
+    [OldName("polg")]
     public string Polg { get; set; }
 
-    [Column("polsh")]
+    [OldName("polsh")]
     public string Polsh { get; set; }
 
-    [Column("posna")]
+    [OldName("posna")]
     public string Posna { get; set; }
 
-    [Column("ty")]
+    [OldName("ty")]
     public string Ty { get; set; }
 
-    [Column("fares")]
+    [OldName("fares")]
     public string Fares { get; set; }
 
-    [Column("torki")]
+    [OldName("torki")]
     public string Torki { get; set; }
 
-    [Column("azer")]
+    [OldName("azer")]
     public string Azer { get; set; }
 
-    [Column("braz")]
+    [OldName("braz")]
     public string Braz { get; set; }
 
-    [Column("sere")]
+    [OldName("sere")]
     public string Sere { get; set; }
 
-    [Column("fin")]
+    [OldName("fin")]
     public string Fin { get; set; }
 
-    [Column("english_shaker")]
+    [OldName("english_shaker")]
     public string EnglishShaker { get; set; }
 
-    [Column("german2")]
+    [OldName("german2")]
     public string German2 { get; set; }
 
-    [Column("fh")]
+    [OldName("fh")]
     public string Fh { get; set; }
 }

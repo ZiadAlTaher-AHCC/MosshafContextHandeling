@@ -13,7 +13,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// old name: E3gaz Table
 /// </summary>
 [OldName("e3gaz")]
-[Table("e3gaz")]
+//[Table("e3gaz")]
 public partial class Egaz 
 {
     [OldName("id")]

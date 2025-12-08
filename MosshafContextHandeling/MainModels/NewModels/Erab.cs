@@ -31,7 +31,7 @@ public partial class Erab
     public string SuraName { get; set; }
 
     [OldName("na7as")]
-    public string Na7as { get; set; }
+    public string Nahas { get; set; }
 
     [OldName("bakoly")]
     public string Bakoly { get; set; }

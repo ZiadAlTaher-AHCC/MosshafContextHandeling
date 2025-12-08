@@ -12,11 +12,14 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 public partial class Moshabeh1
 {
     [OldName("QuranID")]
-    public int? QuranId { get; set; }
+    public int? QuranId { get; set; } // navigation property
 
     [OldName("PageNo")]
     public int? PageNumber { get; set; }
 
     [OldName("ma3any")]
     public string Maany { get; set; }
+    // Navigation Property to Quran
+    //[ForeignKey(nameof(QuranId))]
+    //public Quran Quran { get; set; }
 }

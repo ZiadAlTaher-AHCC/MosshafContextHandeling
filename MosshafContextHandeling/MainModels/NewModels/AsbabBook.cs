@@ -10,7 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("AsbabBook")]
-[Table("asbab_book")]
+//[Table("asbab_book")]
 // [Index("Feature", Name = "feature")]
 public partial class AsbabBook
 {
