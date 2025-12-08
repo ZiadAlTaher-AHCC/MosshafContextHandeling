@@ -5,45 +5,50 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 /// <summary>
 /// old name: e3gaz_sub_bab
 /// </summary>
- 
-[Index("BabId", Name = "bab_id")]
-[Index("ChapterId", Name = "chapter_id")]
-[Index("E3gazBookId", Name = "e3gaz_book_id")]
-[Index("Id", Name = "id")]
-[Index("SubBabId", Name = "sub_bab_id")]
+[OldName("e3gaz_sub_bab")]
+[Table("e3gaz_sub_bab")]
+// [Index("BabId", Name = "bab_id")]
+// [Index("ChapterId", Name = "chapter_id")]
+// [Index("E3gazBookId", Name = "e3gaz_book_id")]
+// [Index("Id", Name = "id")]
+// [Index("SubBabId", Name = "sub_bab_id")]
 public partial class EgazSubBab
 {
+    [OldName("id")]
     [Key]
     [Column("id")]
     public int Id { get; set; }
 
+    [OldName("chapter_id")]
     [Column("chapter_id")]
     public int ChapterId { get; set; }
+
     /// <summary>
     /// old name: e3gaz_book_id
     /// </summary>
-
-   
+    [OldName("e3gaz_book_id")]
     public int EgazBookId { get; set; }
 
+    [OldName("name")]
     [Required]
-    [Column("name")]
     public string Name { get; set; }
 
     /// <summary>
     /// old name: bab_id
     /// </summary>
- 
+    [OldName("bab_id")]
     public int BabId { get; set; }
 
     /// <summary>
     /// old name: sub_bab_id
     /// </summary>
+    [OldName("sub_bab_id")]
     public int SubBabId { get; set; }
 
     //// Navigation

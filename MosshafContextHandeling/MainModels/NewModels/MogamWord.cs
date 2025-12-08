@@ -5,31 +5,30 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("mogam_words", Schema = "quran_quran2")]
+[OldName("mogam_words")]
 public partial class MogamWord
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("word")]
+    [OldName("word")]
     public string Word { get; set; }
 
-    [Column("letter")]
-    public int? Letter { get; set; }
+    [OldName("letter")]
+    public int? LetterId { get; set; }
 
-    [Column("sura")]
-    public int? Sura { get; set; }
+    [OldName("sura")]
+    public int? SuraNumber { get; set; }
 
-    [Column("aya")]
-    public int? Aya { get; set; }
+    [OldName("aya")]
+    public int? AyaNumber { get; set; }
 
-    [Column("type")]
+    [OldName("type")]
     public string Type { get; set; }
 
-    [Column("pageno")]
-    public int? Pageno { get; set; }
+    [OldName("pageno")]
+    public int? PageNumber { get; set; }
 }

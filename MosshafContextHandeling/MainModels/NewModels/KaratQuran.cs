@@ -5,83 +5,67 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-/// <summary>
-/// old name karat_quran
-/// </summary>
-[Keyless]
 
- 
+[OldName("karat_quran")]
 public partial class KaratQuran
 {
-    /// <summary>
-    /// old name: id
-    /// </summary>
+    [OldName("id")]
     public int? Id { get; set; }
 
-    /// <summary>
-    /// old name: QuranID
-    /// </summary>
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
+    
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
+    
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
+    [OldName("VerseNoAr")]
     public string VerseNoAr { get; set; }
+    
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
+    
+    [OldName("SuraName")]
     public string SuraName { get; set; }
 
-    /// <summary>
-    /// old name: karat_vers
-    /// </summary>
+    [OldName("karat_vers")]
     public int? KaratVers { get; set; }
 
-    /// <summary>
-    /// old name: karat_page
-    /// </summary>
+    [OldName("karat_page")]
     public int? KaratPage { get; set; }
 
-    /// <summary>
-    /// old name: karat_type
-    /// </summary>
-    public int? KaratType { get; set; }
+    [OldName("karat_type")]
+    public int? KaratType { get; set; } //TODO: is this is a foreign key
 
-    /// <summary>
-    /// old name: status
-    /// </summary>
+    [OldName("status")]
     public int? Status { get; set; }
 
-    /// <summary>
-    /// old name: status_fullImg
-    /// </summary>
+    [OldName("status_fullImg")]
     public int? StatusFullImg { get; set; }
 
-    /// <summary>
-    /// old name: code_img
-    /// </summary>
+    [OldName("code_img")]
     public string CodeImg { get; set; }
 
-    /// <summary>
-    /// old name: master
-    /// </summary>
+    [OldName("master")]
     public int? Master { get; set; }
 
-    /// <summary>
-    /// old name: mp3
-    /// </summary>
+    [OldName("mp3")]
     public int? Mp3 { get; set; }
 
-    /// <summary>
-    /// old name: upd
-    /// </summary>
-    public short? Upd { get; set; }
+    [OldName("upd")]
+    public short? Upd { get; set; } //TODO: for what is this column
 
-    /// <summary>
-    /// old name: up_time
-    /// </summary>
-    public DateTime? UpTime { get; set; }
+    [OldName("up_time")]
+    public DateTime? UpTime { get; set; } //TODO: for what is this column
+    
     //[ForeignKey(nameof(QuranId))]
     //public Quran Quran { get; set; }
 }

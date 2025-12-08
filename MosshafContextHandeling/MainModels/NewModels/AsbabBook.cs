@@ -5,35 +5,37 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
- 
-[Index("Feature", Name = "feature")]
+[OldName("AsbabBook")]
+[Table("asbab_book")]
+// [Index("Feature", Name = "feature")]
 public partial class AsbabBook
 {
+    [OldName("id")]
     [Key]
-    [Column("id")]
     public int Id { get; set; }
 
+    [OldName("book")]
     [Required]
-    [Column("book")]
     public string Book { get; set; }
 
+    [OldName("Field_q")]
     [Required]
-    [Column("Field_q")]
-    public string FieldQ { get; set; }
+    public string MappedColumnName { get; set; }
 
+    [OldName("details")]
     [Required]
-    [Column("details")]
     public string Details { get; set; }
 
-    [Column("feature")]
+    [OldName("feature")]
     public int Feature { get; set; }
 
-    [Column("date")]
+    [OldName("date")]
     public int Date { get; set; }
 
-    [Column("active")]
+    [OldName("active")]
     public short Active { get; set; }
 }

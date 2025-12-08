@@ -5,47 +5,52 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
+[OldName("e3rab")]
 
-[Keyless]
-[Table("e3rab", Schema = "quran_quran2")]
 public partial class Erab
 {
-    [Column("QuranID")]
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
 
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
 
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
+    [OldName("SuraName")]
     public string SuraName { get; set; }
 
-    [Column("na7as")]
+    [OldName("na7as")]
     public string Na7as { get; set; }
 
-    [Column("bakoly")]
+    [OldName("bakoly")]
     public string Bakoly { get; set; }
 
-    [Column("akbry")]
+    [OldName("akbry")]
     public string Akbry { get; set; }
 
-    [Column("kharat")]
+    [OldName("kharat")]
     public string Kharat { get; set; }
 
-    [Column("daas")]
-    public string Daas { get; set; }
+    [OldName("daas")]
+    public string Daas { get; set; } //TODO: rename this columns to something more meaningfull
 
-    [Column("tbian")]
+    [OldName("tbian")]
     public string Tbian { get; set; }
 
-    [Column("gadwal")]
+    [OldName("gadwal")]
     public string Gadwal { get; set; }
 
-    [Column("darwish")]
+    [OldName("darwish")]
     public string Darwish { get; set; }
 }

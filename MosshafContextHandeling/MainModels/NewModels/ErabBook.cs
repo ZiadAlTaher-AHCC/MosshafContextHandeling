@@ -5,22 +5,20 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-/// <summary>
-/// old name : E3rabBook
-/// </summary>
- 
+
+[OldName("e3rab_book")]
 public partial class ErabBook
 {
-    [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
+    [OldName("book")]
     [Required]
-    [Column("book")]
     public string Book { get; set; }
 
-    [Column("Field_q")]
-    public string FieldQ { get; set; }
+    [OldName("Field_q")]
+    public string MappedColumnName { get; set; }
 }

@@ -5,43 +5,45 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 using MosshafContextHandeling.Models;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
- 
-[Index("Feature", Name = "feature")]
-[Index("Id", Name = "id")]
+[OldName("e3gaz_book")]
+// [Table("e3gaz_book")]
+// [Index("Feature", Name = "feature")]
+// [Index("Id", Name = "id")]
 public partial class EgazBook
 {
+    [OldName("id")]
     [Key]
-    [Column("id")]
     public int Id { get; set; }
 
+    [OldName("book")]
     [Required]
-    [Column("book")]
     public string Book { get; set; }
 
+    [OldName("Field_q")]
     [Required]
-    [Column("Field_q")]
-    public string FieldQ { get; set; }
+    public string MappedColumnName { get; set; }
 
+    [OldName("details")]
     [Required]
-    [Column("details")]
     public string Details { get; set; }
 
-    [Column("feature")]
-    public int Feature { get; set; }
+    [OldName("feature")]
+    public int Feature { get; set; } // TODO: For what?
 
-    [Column("date")]
+    [OldName("date")]
     public int Date { get; set; }
 
-    [Column("active")]
-    public short Active { get; set; }
+    [OldName("active")]
+    public short Active { get; set; } //TODO: is it used ?
 
-    // Navigation
-    public ICollection<EgazChapter> Chapters { get; set; }
-    public ICollection<EgazBab> Babs { get; set; }
-    public ICollection<EgazSubBab> SubBabs { get; set; }
-    public ICollection<Egaz> Items { get; set; }
+    // // Navigation
+    // public ICollection<EgazChapter> Chapters { get; set; }
+    // public ICollection<EgazBab> Babs { get; set; }
+    // public ICollection<EgazSubBab> SubBabs { get; set; }
+    // public ICollection<Egaz> Items { get; set; }
 }

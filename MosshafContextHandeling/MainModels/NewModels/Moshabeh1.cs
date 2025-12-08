@@ -5,18 +5,18 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("moshabeh1", Schema = "quran_quran2")]
+[OldName("moshabeh1")]
 public partial class Moshabeh1
 {
-    [Column("QuranID")]
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
-    public int? PageNo { get; set; }
+    [OldName("PageNo")]
+    public int? PageNumber { get; set; }
 
-    [Column("ma3any")]
-    public string Ma3any { get; set; }
+    [OldName("ma3any")]
+    public string Maany { get; set; }
 }

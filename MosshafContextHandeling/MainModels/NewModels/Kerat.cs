@@ -5,49 +5,40 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
 [Keyless]
-//[Table("kerat", Schema = "quran_quran2")]
-/// <summary>
-/// old name: Kerat
-/// </summary>
+[OldName("kerat")]
 public partial class Kerat
 {
-    /// <summary>
-    /// old name: QuranID
-    /// </summary>
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
-    /// <summary>
-    /// old name: Verse
-    /// </summary>
+    [OldName("Verse")]
     public string Verse { get; set; }
 
-    /// <summary>
-    /// old name: GVerse
-    /// </summary>
-    [Column("GVerse")]
+    [OldName("GVerse")]
     public string Gverse { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
+    
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
+    
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
-    /// <summary>
-    /// old name: SuraName
-    /// </summary>
+    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
 
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
-    /// <summary>
-    /// old name: ma3any
-    /// </summary>
-    [Column("maany")]
-    public string Maany { get; set; }
+    [OldName("ma3any")]
+    public string Maany { get; set; } //TODO: there is no data in this column except QuranID 4278, 4283, 4284, 4286 
 
     // Navigation Property to Quran
     //[ForeignKey(nameof(QuranId))]

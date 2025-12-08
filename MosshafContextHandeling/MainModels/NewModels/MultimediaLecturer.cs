@@ -5,37 +5,36 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
+[OldName("multimedia_lecturer")]
 
-[Keyless]
-[Table("multimedia_lecturer", Schema = "quran_quran2")]
 public partial class MultimediaLecturer
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("name")]
+    [OldName("name")]
     [StringLength(1000)]
     public string Name { get; set; }
 
-    [Column("creat_date")]
-    [Precision(0)]
-    public DateTime? CreatDate { get; set; }
+    // [OldName("creat_date")]
+    // public DateTime? CreatDate { get; set; }
 
-    [Column("status")]
+    [OldName("status")]
     public short? Status { get; set; }
 
-    [Column("photo")]
+    [OldName("photo")]
     [StringLength(800)]
-    public string Photo { get; set; }
+    public string Image { get; set; }
 
-    [Column("descripton")]
+    [OldName("descripton")]
     public string Descripton { get; set; }
 
-    [Column("user_add")]
+    [OldName("user_add")]
     public int? UserAdd { get; set; }
 
-    [Column("create_date", TypeName = "datetime")]
+    [OldName("create_date")]
     public DateTime? CreateDate { get; set; }
 }

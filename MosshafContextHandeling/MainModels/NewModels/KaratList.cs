@@ -5,17 +5,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
- 
+[OldName("karat_list")]
 public partial class KaratList
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("name")]
+    [OldName("name")]
     [StringLength(255)]
     public string Name { get; set; }
 }

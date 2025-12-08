@@ -5,50 +5,49 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("multimedia_categories", Schema = "quran_quran2")]
+[OldName("multimedia_categories")]
 public partial class MultimediaCategory
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("name")]
+    [OldName("name")]
     [StringLength(300)]
     public string Name { get; set; }
 
-    [Column("description")]
+    [OldName("description")]
     [StringLength(500)]
     public string Description { get; set; }
 
+    [OldName("view")]
     [Column("view")]
     public int? View { get; set; }
 
-    [Column("photo")]
+    [OldName("photo")]
     [StringLength(400)]
     public string Photo { get; set; }
 
-    [Column("type")]
+    [OldName("type")]
     public int? Type { get; set; }
 
-    [Column("sort")]
+    [OldName("sort")]
     public int? Sort { get; set; }
 
-    [Column("user_add")]
-    public int? UserAdd { get; set; }
+    // [OldName("user_add")]
+    // public int? UserAdd { get; set; } 
 
-    [Column("create_date")]
-    [Precision(0)]
+    [OldName("create_date")]
     public DateTime? CreateDate { get; set; }
 
-    [Column("status")]
+    [OldName("status")]
     public short? Status { get; set; }
 
-    [Column("lang")]
-    public int? Lang { get; set; }
+    [OldName("lang")]
+    public int? LanguageId { get; set; } // TODO: should be a forign key 
 
-    [Column("section_type")]
+    [OldName("section_type")]
     public int? SectionType { get; set; }
 }

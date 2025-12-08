@@ -5,53 +5,47 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 /// <summary>
 /// old name: E3gaz Table
 /// </summary>
- 
+[OldName("e3gaz")]
+[Table("e3gaz")]
 public partial class Egaz 
 {
+    [OldName("id")]
     [Key]
-    [Column("id")]
     public int Id { get; set; }
 
+    [OldName("matn")]
     [Required]
-    [Column("matn")]
     public string Matn { get; set; }
-    /// <summary>
-    /// old name: chapter_id
-    /// </summary>
- 
-    public int ChapterId { get; set; }
-    /// <summary>
-    /// old name: bab_id
-    /// </summary>
-   
-    public int BabId { get; set; }
-    /// <summary>
-    /// old name: sub_bab_id
-    /// </summary>
-   
-    public int SubBabId { get; set; }
-    /// <summary>
-    /// old name: e3gaz_book_id
-    /// </summary>
- 
+    
+    [OldName("chapter_id")]
+    public int EgazChapterId { get; set; }
+    
+    [OldName("bab_id")]
+    public int EgazBabId { get; set; }
+    
+    [OldName("sub_bab_id")]
+    public int EgazSubBabId { get; set; }
+    
+    [OldName("e3gaz_book_id")]
     public int EgazBookId { get; set; }
 
     // Navigations
-    [ForeignKey(nameof(EgazBookId))]
-    public EgazBook Book { get; set; }
+    // [ForeignKey(nameof(EgazBookId))]
+    // public EgazBook EgazBook { get; set; }
 
-    [ForeignKey(nameof(ChapterId))]
-    public EgazChapter Chapter { get; set; }
+    // [ForeignKey(nameof(ChapterId))]
+    // public EgazChapter EgazChapter { get; set; }
 
-    [ForeignKey(nameof(BabId))]
-    public EgazBab Bab { get; set; }
+    // [ForeignKey(nameof(BabId))]
+    // public EgazBab EgazBab { get; set; }
 
-    [ForeignKey(nameof(SubBabId))]
-    public EgazSubBab SubBab { get; set; }
+    // [ForeignKey(nameof(SubBabId))]
+    // public EgazSubBab EgazSubBab { get; set; }
 }

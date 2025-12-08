@@ -5,23 +5,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("mofrad_words", Schema = "quran_quran2")]
+[OldName("mofrad_words")]
 public partial class MofradWord
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("word")]
-    [StringLength(255)]
+    [OldName("word")]
     public string Word { get; set; }
 
-    [Column("details")]
+    [OldName("details")]
     public string Details { get; set; }
 
-    [Column("letter")]
+    [OldName("letter")]
     public int? Letter { get; set; }
+    //TODO:Look for the relations between MofradWord and MofradLetter or other tables 
 }

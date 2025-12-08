@@ -5,41 +5,43 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 using MosshafContextHandeling.Models;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Table("e3gaz_bab", Schema = "quran_quran2")]
-[Index("BabId", Name = "bab_id")]
-[Index("ChapterId", Name = "chapter_id")]
-[Index("E3gazBookId", Name = "e3gaz_book_id")]
-[Index("Id", Name = "id")]
+[OldName("E3gazBab")]
+// [Table("e3gaz_bab")]
+// [Index("BabId", Name = "bab_id")]
+// [Index("ChapterId", Name = "chapter_id")]
+// [Index("E3gazBookId", Name = "e3gaz_book_id")]
+// [Index("Id", Name = "id")]
 public partial class EgazBab
 {
+    [OldName("id")]
     [Key]
-    [Column("id")]
     public int Id { get; set; }
 
-    [Column("chapter_id")]
-    public int ChapterId { get; set; }
+    [OldName("chapter_id")]
+    public int EgazChapterId { get; set; }
 
-    [Column("e3gaz_book_id")]
+    [OldName("e3gaz_book_id")]
     public int EgazBookId { get; set; }
 
+    [OldName("name")]
     [Required]
-    [Column("name")]
     public string Name { get; set; }
 
-    [Column("bab_id")]
+    [OldName("bab_id")]
     public int BabId { get; set; }
 
     // Navigation
-    [ForeignKey(nameof(EgazBookId))]
-    public EgazBook Book { get; set; }
+    // [ForeignKey(nameof(EgazBookId))]
+    // public EgazBook EgazBook { get; set; }
 
-    [ForeignKey(nameof(ChapterId))]
-    public EgazChapter Chapter { get; set; }
+    // [ForeignKey(nameof(ChapterId))]
+    // public EgazChapter EgazChapter { get; set; }
 
-    public ICollection<EgazSubBab> SubBabs { get; set; }
-    public ICollection<EgazItem> Items { get; set; }
+    // public ICollection<EgazSubBab> SubBabs { get; set; }
+    // public ICollection<EgazItem> Items { get; set; }
 }

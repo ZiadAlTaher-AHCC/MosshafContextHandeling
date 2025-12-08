@@ -5,47 +5,41 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
- 
-/// <summary>
-/// old name: KaratQuranOrg
-/// </summary>
+[OldName("KaratQuranOrg")]
 public partial class KaratQuranOrg
 {
-    /// <summary>
-    /// old name: QuranID
-    /// </summary>
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
+    
+    [OldName("PartNo")]
     public int? PartNo { get; set; }
+    
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
+    [OldName("VerseNoAr")]
     public string VerseNoAr { get; set; }
+    
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
-    /// <summary>
-    /// old name: SuraName
-    /// </summary>
+    [OldName("SuraName")]
     [StringLength(250)]
     public string SuraName { get; set; }
 
-    /// <summary>
-    /// old name: karat_vers
-    /// </summary>
+    [OldName("karat_vers")]
     public int? KaratVers { get; set; }
 
-    /// <summary>
-    /// old name: karat_page
-    /// </summary>
+    [OldName("karat_page")]
     public int? KaratPage { get; set; }
 
-    /// <summary>
-    /// old name: karat_type
-    /// </summary>
+    [OldName("karat_type")]
     public int? KaratType { get; set; }
 
     //// Navigation Property to Quran

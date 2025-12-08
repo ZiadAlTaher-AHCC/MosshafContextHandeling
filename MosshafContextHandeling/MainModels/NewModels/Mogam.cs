@@ -5,31 +5,30 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("mogam", Schema = "quran_quran2")]
+[OldName("mogam")]
 public partial class Mogam
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("chapter_id")]
+    [OldName("chapter_id")]
     public int? ChapterId { get; set; }
 
-    [Column("bab_id")]
+    [OldName("bab_id")]
     public int? BabId { get; set; }
 
-    [Column("1text")]
-    public string _1text { get; set; }
+    [OldName("1text")]
+    public string _1text { get; set; } //TODO: why this is named like that ?  rename it to something more meaningfull
 
-    [Column("bab_name")]
+    [OldName("bab_name")]
     public string BabName { get; set; }
 
-    [Column("text")]
-    public string Text { get; set; }
+    [OldName("text")]
+    public string Text { get; set; }// TODO : what is this column for ?
 
-    [Column("book_id")]
+    [OldName("book_id")]
     public int? BookId { get; set; }
 }

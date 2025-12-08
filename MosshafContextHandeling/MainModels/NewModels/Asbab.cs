@@ -5,49 +5,63 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
+[OldName("asbab")]
 [Table("asbab" )]
 [Index("PageNo", Name = "PageNo")]
 [Index("QuranId", Name = "QuranID")]
 [Index("SuraNo", Name = "SuraNo")]
 public partial class Asbab
 {
+    [OldName("QuranID")]
     [Key]
     [Column("QuranID")]
     public int QuranId { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
 
+    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
+    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
+    [OldName("SuraName")]
     [Required]
     [StringLength(250)]
     public string SuraName { get; set; }
 
+    [OldName("lebab")]
     [Required]
     [Column("lebab")]
     public string Lebab { get; set; }
 
+    [OldName("mosnad")]
     [Required]
     [Column("mosnad")]
     public string Mosnad { get; set; }
 
+    [OldName("verse")]
     [Required]
     [Column("verse")]
     public string Verse { get; set; }
+    
     /// <summary>
     /// old name: 3egab
     /// </summary>
+    [OldName("3egab")]
     [Required]
     [Column("Eegab")]
     public string Eegab { get; set; }
+    
     /// <summary>
     /// old name: esti3ab
     /// </summary>
+    [OldName("esti3ab")]
     [Required]
     [Column("Esteaab")]
     public string Esteaab { get; set; }
@@ -55,6 +69,7 @@ public partial class Asbab
     /// <summary>
     /// old name: mo7arrer
     /// </summary>
+    [OldName("mo7arrer")]
     [Required]
     [Column("Moharrer")]
     public string Moharrer { get; set; }

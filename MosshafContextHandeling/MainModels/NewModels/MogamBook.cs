@@ -5,23 +5,23 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("mogam_book", Schema = "quran_quran2")]
+[OldName("mogam_book")]
 public partial class MogamBook
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("name")]
+    [OldName("name")]
     public string Name { get; set; }
 
-    [Column("about")]
-    public string About { get; set; }
+    // [OldName("about")]
+    // public string About { get; set; }
 
-    [Column("date")]
-    public int? Date { get; set; }
+    // [OldName("date")]
+    // public int? Date { get; set; }
+    
     //public ICollection<MogamBab> MogamBabs { get; set; }
 }

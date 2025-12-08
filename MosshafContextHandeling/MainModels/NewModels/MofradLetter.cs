@@ -5,17 +5,15 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
-[Table("mofrad_letters", Schema = "quran_quran2")]
+[OldName("mofrad_letters")]
 public partial class MofradLetter
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("letter")]
-    [StringLength(255)]
+    [OldName("letter")]
     public string Letter { get; set; }
 }

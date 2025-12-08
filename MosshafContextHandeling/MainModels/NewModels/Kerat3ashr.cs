@@ -5,23 +5,21 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-
-[Keyless]
- 
-public partial class Kerat3ashr
+[OldName("Kerat3ashr")]
+public partial class KeratAashr
 {
-    [Column("QuranID")]
+    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
+    [OldName("PageNo")]
     public int? PageNo { get; set; }
-    /// <summary>
-    /// old name: ma3any
-    /// </summary>
-    [Column("maany")]
-    public string Maany { get; set; }
+    
+    [OldName("ma3any")]
+    public string MaanyText { get; set; } //TODO: Rename this property to something more meaningful why this is here ? isn't it the same as MaanyText in Ma3any
 
-    [Column("farsh")]
-    public string Farsh { get; set; }
+    [OldName("farsh")]
+    public string Farsh { get; set; } //TODO: Rename this property to something more meaningful
 }

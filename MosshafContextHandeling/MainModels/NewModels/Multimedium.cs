@@ -5,87 +5,82 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
+[OldName("multimedia")]
 
-[Keyless]
-[Table("multimedia", Schema = "quran_quran2")]
-public partial class Multimedium
+public partial class Multimedia
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("src")]
+    [OldName("src")]
     public string Src { get; set; }
 
-    [Column("photo")]
-    [StringLength(500)]
+    [OldName("photo")]
     public string Photo { get; set; }
 
-    [Column("title")]
-    [StringLength(255)]
+    [OldName("title")]
     public string Title { get; set; }
 
-    [Column("lecturer")]
+    [OldName("lecturer")]
     public int? Lecturer { get; set; }
 
-    [Column("sura")]
+    [OldName("sura")]
     public int? Sura { get; set; }
 
-    [Column("type")]
+    [OldName("type")]
     public int? Type { get; set; }
 
-    [Column("publish_status")]
-    [Precision(0)]
+    [OldName("publish_status")]
     public DateTime? PublishStatus { get; set; }
 
-    [Column("description")]
-    [StringLength(1000)]
+    [OldName("description")]
     public string Description { get; set; }
 
-    [Column("categories")]
+    [OldName("categories")]
     public int? Categories { get; set; }
 
-    [Column("view")]
+    [OldName("view")]
     public int? View { get; set; }
 
-    [Column("status")]
+    [OldName("status")]
     public short? Status { get; set; }
 
-    [Column("homepage")]
-    public short? Homepage { get; set; }
+    [OldName("homepage")]
+    public short? HomePage { get; set; }
 
-    [Column("facebook_like")]
-    public int? FacebookLike { get; set; }
+    [OldName("facebook_like")]
+    public int? FacebookLike { get; set; } //TODO : why is this column needed
 
-    [Column("facebook_comment")]
+    [OldName("facebook_comment")]
     public int? FacebookComment { get; set; }
 
-    [Column("facebook_share")]
+    [OldName("facebook_share")]
     public int? FacebookShare { get; set; }
 
-    [Column("facebook_commentbox")]
-    public int? FacebookCommentbox { get; set; }
+    [OldName("facebook_commentbox")]
+    public int? FacebookCommentBox { get; set; }
 
-    [Column("facebook_total_count")]
+    [OldName("facebook_total_count")]
     public int? FacebookTotalCount { get; set; }
 
-    [Column("linkedin_count")]
+    [OldName("linkedin_count")]
     public int? LinkedinCount { get; set; }
 
-    [Column("total_socialmedia")]
+    [OldName("total_socialmedia")]
     public int? TotalSocialmedia { get; set; }
 
-    [Column("twitter_count")]
+    [OldName("twitter_count")]
     public int? TwitterCount { get; set; }
 
-    [Column("lang")]
-    public int? Lang { get; set; }
+    [OldName("lang")]
+    public int? LanguageId { get; set; } //TODO: is this a foreign key?
 
-    [Column("user_add")]
+    [OldName("user_add")]
     public int? UserAdd { get; set; }
 
-    [Column("create_date")]
-    [Precision(0)]
+    [OldName("create_date")]
     public DateTime? CreateDate { get; set; }
 }

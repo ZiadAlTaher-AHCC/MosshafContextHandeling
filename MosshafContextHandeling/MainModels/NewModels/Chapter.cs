@@ -5,23 +5,25 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
- 
+[OldName("chapter")]
+[Table("chapter")]
 public partial class Chapter
 {
+    [OldName("id")]
     [Key]
-    [Column("id")]
     public int Id { get; set; }
 
-    [Column("chapter_id")]
-    public int ChapterId { get; set; }
+    [OldName("chapter_id")]
+    public int ChapterId { get; set; } //TODO: if it isn't a forignkey change to ChapterNumber  
 
+    [OldName("name")]
     [Required]
-    [Column("name")]
     public string Name { get; set; }
 
-    [Column("book_id")]
+    [OldName("book_id")]
     public int BookId { get; set; }
 }

@@ -5,22 +5,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
+[OldName("mofradat")]
 
-[Keyless]
-[Table("mofradat", Schema = "quran_quran2")]
 public partial class Mofradat
 {
-    [Column("id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [Column("nass")]
+    [OldName("nass")]
     public string Nass { get; set; }
 
-    [Column("title")]
+    [OldName("title")]
     public string Title { get; set; }
 
-    [Column("pageid")]
+    [OldName("pageid")]
     public int? Pageid { get; set; }
 }

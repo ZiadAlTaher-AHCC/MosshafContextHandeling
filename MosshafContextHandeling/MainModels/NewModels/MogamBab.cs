@@ -5,31 +5,26 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-/// <summary>
-/// old table name: Bab
-/// </summary>
-[Table("MogamBab")]
+
+[OldName("bab")]
 public partial class MogamBab
 {
-    [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("chapter_id")]
+    [OldName("chapter_id")]
     public int ChapterId { get; set; }
 
-    [Column("bab_id")]
+    [OldName("bab_id")]
     public int BabId { get; set; }
 
-    [Required]
-    [Column("name")]
+    [OldName("name")]
     public string Name { get; set; }
-    /// <summary>
-    /// older name: BookId
-    /// </summary>
-    [Column("MogamBookId")]
+    
+    [OldName("MogamBookId")]
     public int MogamBookId { get; set; }
 
     //[ForeignKey(nameof(MogamBookId))]
