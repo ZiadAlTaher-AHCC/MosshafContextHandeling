@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("reciters", Schema = "quran_quran2")]
+[OldName("reciters")]
 public partial class Reciter
 {
     [Key]

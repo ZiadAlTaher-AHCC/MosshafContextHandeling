@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("t_lang", Schema = "quran_quran2")]
 [Index("Id", Name = "id")]
+[OldName("t_lang")]
 public partial class TLang
 {
     [OldName("lang")]

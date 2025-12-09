@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
 //[Table("tafseer_naboy", Schema = "quran_quran2")]
+[OldName("tafseer_naboy")]
 public partial class TafseerNaboy
 {
     [OldName("id")]
@@ -21,7 +22,7 @@ public partial class TafseerNaboy
     [OldName("selid")]
     public int? Selid { get; set; }
     [OldName("SuraNo")]
-    public int? SuraNo { get; set; }
+    public int? SuraNo { get; set; } // TODO: if it isn't a forignkey change to SuraNumber
 
     [OldName("taraf")]
     public string Taraf { get; set; }
@@ -34,7 +35,7 @@ public partial class TafseerNaboy
     public string HadithTxt { get; set; }
 
     [OldName("hadith_search")]
-    public string HadithSearch { get; set; }
+    public string HadithSearch { get; set; } // TODO: for what is this column
 
     [OldName("status")]
     public int? Status { get; set; }

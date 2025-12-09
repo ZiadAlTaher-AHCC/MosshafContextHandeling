@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("tragem_book", Schema = "quran_quran2")]
+[OldName("tragem_book")]
 public partial class TragemBook
 {
     [Key]

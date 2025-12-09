@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 ////[Table("sura", Schema = "quran_quran2")]
+[OldName("sura")]
 public partial class Sura
 {
     [OldName("SuraNo")]
@@ -18,7 +19,7 @@ public partial class Sura
     [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
-
+    [OldName("Verses")]
     public int? Verses { get; set; }
     [OldName("Type")]
     [Required]

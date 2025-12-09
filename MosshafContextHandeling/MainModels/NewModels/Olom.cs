@@ -11,9 +11,10 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
 ////[Table("olom", Schema = "quran_quran2")]
+[OldName("olom")]
 public partial class Olom
 {
-    [OldName("Id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
     [OldName("Matn")]

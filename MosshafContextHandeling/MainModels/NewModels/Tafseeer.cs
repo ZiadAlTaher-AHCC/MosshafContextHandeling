@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
 //[Table("tafseeer", Schema = "quran_quran2")]
+[OldName("tafseeer")]
 public partial class Tafseeer
 {
     [OldName("id")]
