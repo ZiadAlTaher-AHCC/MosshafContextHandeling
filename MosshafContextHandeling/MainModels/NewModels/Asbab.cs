@@ -10,22 +10,21 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("asbab")]
-//[Table("asbab" )]
-[Index("PageNo", Name = "PageNo")]
-[Index("QuranId", Name = "QuranID")]
-[Index("SuraNo", Name = "SuraNo")]
 public partial class Asbab
 {
     [OldName("QuranID")]
     [Key]
-   
-    public int QuranId { get; set; }
+    public int QuranId { get; set; } //TODO : should be a forign key to Quran table and primary key for the same table 
 
     [OldName("PageNo")]
     public int? PageNo { get; set; }
 
     [OldName("VerseNo")]
     public int? VerseNo { get; set; }
+
+    [OldName("verse")]
+    [Required]
+    public string Verse { get; set; }//TODO : should be deleted 
 
     [OldName("SuraNo")]
     public int? SuraNo { get; set; }
@@ -37,40 +36,21 @@ public partial class Asbab
 
     [OldName("lebab")]
     [Required]
- 
-    public string Lebab { get; set; }
+    public string Lebab { get; set; } //TODO: Referes to what  => لباب النقول
 
     [OldName("mosnad")]
     [Required]
-  
-    public string Mosnad { get; set; }
-
-    [OldName("verse")]
-    [Required]
- 
-    public string Verse { get; set; }
+    public string Mosnad { get; set; }//TODO: Referes to what  => صحيح المسند من اسباب النزول
     
-    /// <summary>
-    /// old name: 3egab
-    /// </summary>
     [OldName("3egab")]
     [Required]
- 
-    public string Eegab { get; set; }
-    
-    /// <summary>
-    /// old name: esti3ab
-    /// </summary>
+    public string Eegab { get; set; } // TODO: Referes to what  => العجاب في بيان الاسباب
+
     [OldName("esti3ab")]
     [Required]
- 
-    public string Esteaab { get; set; }
+    public string Esteaab { get; set; } //TODO: Referes to what  => الاستيعاب في بيان الاسباب
 
-    /// <summary>
-    /// old name: mo7arrer
-    /// </summary>
     [OldName("mo7arrer")]
     [Required]
- 
-    public string Moharrer { get; set; }
+    public string Moharrer { get; set; } //TODO: Referes to what  => المحرر في اسباب النزول
 }

@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-[OldName("KaratQuranOrg")]
+[OldName("karat_quran_org")]
 public partial class KaratQuranOrg
 {
+
+    public int Id { get; set; }
     [OldName("QuranID")]
     public int? QuranId { get; set; }
 

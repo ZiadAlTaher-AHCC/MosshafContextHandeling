@@ -9,9 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[OldName("AsbabBook")]
-//[Table("asbab_book")]
-// [Index("Feature", Name = "feature")]
+[OldName("asbab_book")]
 public partial class AsbabBook
 {
     [OldName("id")]
@@ -25,17 +23,4 @@ public partial class AsbabBook
     [OldName("Field_q")]
     [Required]
     public string MappedColumnName { get; set; }
-
-    [OldName("details")]
-    [Required]
-    public string Details { get; set; }
-
-    [OldName("feature")]
-    public int Feature { get; set; }
-
-    [OldName("date")]
-    public int Date { get; set; }
-
-    [OldName("active")]
-    public short Active { get; set; }
 }

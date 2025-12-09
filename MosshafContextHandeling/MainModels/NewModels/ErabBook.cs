@@ -12,7 +12,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("e3rab_book")]
 public partial class ErabBook
 {
-    [OldName("id")]
+    //[OldName("id")]
     public int Id { get; set; }
 
     [OldName("book")]

@@ -9,7 +9,6 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("ahkam_book")]
-[Index("Feature", Name = "feature")]
 public partial class AhkamBook
 {
     [OldName("id")]
@@ -27,20 +26,4 @@ public partial class AhkamBook
   
     public string MappedColumnName  { get; set; } 
 
-    //[OldName("details")]
-    //[Required]
-    //// [Column("details")]
-    //public string Details { get; set; }
-
-    [OldName("feature")]
- 
-    public int Feature { get; set; } //TODO : for what is this column 
-
-    [OldName("date")]
- 
-    public int Date { get; set; } //TODO : for what is this column
-
-    [OldName("active")]
-   
-    public short Active { get; set; } //TODO : for what is this column
 }
