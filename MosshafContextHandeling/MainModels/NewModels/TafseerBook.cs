@@ -39,9 +39,9 @@ public partial class TafseerBook
     [OldName("type")]
     public int Type { get; set; }
 
-    [OldName("active")]
-    public short Active { get; set; }
+    //[OldName("active")]
+    //public short Active { get; set; }
 
-    [OldName("books_full")]
-    public short BooksFull { get; set; }
+    //[OldName("books_full")]
+    //public short BooksFull { get; set; }
 }

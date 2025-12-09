@@ -64,8 +64,8 @@ public partial class QuranSound
     [OldName("no_of_letters")]
     public int? NoOfLetters { get; set; }
 
-    [OldName("no_of_haraka")]
-    public int? NoOfHaraka { get; set; }
+    //[OldName("no_of_haraka")]
+    //public int? NoOfHaraka { get; set; }
 
     [OldName("no_of_ghonna")]
     public int? NoOfGhonna { get; set; }

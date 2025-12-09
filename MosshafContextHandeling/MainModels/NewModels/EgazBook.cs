@@ -28,18 +28,18 @@ public partial class EgazBook
     [Required]
     public string MappedColumnName { get; set; }
 
-    [OldName("details")]
-    [Required]
-    public string Details { get; set; }
+    //[OldName("details")]
+    //[Required]
+    //public string Details { get; set; }
 
-    [OldName("feature")]
-    public int Feature { get; set; } // TODO: For what?
+    //[OldName("feature")]
+    //public int Feature { get; set; } // TODO: For what?
 
-    [OldName("date")]
-    public int Date { get; set; }
+    //[OldName("date")]
+    //public int Date { get; set; }
 
-    [OldName("active")]
-    public short Active { get; set; } //TODO: is it used ?
+    //[OldName("active")]
+    //public short Active { get; set; } //TODO: is it used ?
 
     // // Navigation
     // public ICollection<EgazChapter> Chapters { get; set; }

@@ -35,14 +35,14 @@ public partial class KaratQuranOrg
     [StringLength(250)]
     public string SuraName { get; set; }
 
-    [OldName("karat_vers")]
-    public int? KaratVers { get; set; }
+    //[OldName("karat_vers")]
+    //public int? KaratVers { get; set; }
 
-    [OldName("karat_page")]
-    public int? KaratPage { get; set; }
+    //[OldName("karat_page")]
+    //public int? KaratPage { get; set; }
 
-    [OldName("karat_type")]
-    public int? KaratType { get; set; }
+    //[OldName("karat_type")]
+    //public int? KaratType { get; set; }
 
     //// Navigation Property to Quran
     //[ForeignKey(nameof(QuranId))]

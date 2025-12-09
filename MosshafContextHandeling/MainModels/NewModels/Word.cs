@@ -27,8 +27,8 @@ public partial class Word
     [OldName("QuranID")]
     public int? QuranId { get; set; } // foreign key to quran.quran_id
 
-    [OldName("score")]
-    public int? Score { get; set; }
+    //[OldName("score")]
+    //public int? Score { get; set; }
 
     [OldName("pageno")]
     public int? Pageno { get; set; }

@@ -36,9 +36,9 @@ public partial class Tafseeer
     public int? PartNo { get; set; }
     [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-    [OldName("SuraName")]
-    [StringLength(50)]
-    public string SuraName { get; set; }
+    //[OldName("SuraName")]
+    //[StringLength(50)]
+    //public string SuraName { get; set; }
     [OldName("SuraNo")]
     public int? SuraNo { get; set; } // navigation property to Sura
 

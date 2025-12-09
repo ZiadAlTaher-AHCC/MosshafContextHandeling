@@ -243,8 +243,8 @@ public partial class Tafseer
     [OldName("ibnkathir_new")]
     public string IbnkathirNew { get; set; }
 
-    [OldName("up_data")]
-    public int? UpData { get; set; }
+    //[OldName("up_data")]
+    //public int? UpData { get; set; }
 
     [OldName("dor1")]
     public string Dor1 { get; set; }
@@ -270,6 +270,6 @@ public partial class Tafseer
     [OldName("qatan1")]
     public string Qatan1 { get; set; }
 
-    [OldName("books_full")]
-    public int? BooksFull { get; set; }
+    //[OldName("books_full")]
+    //public int? BooksFull { get; set; }
 }

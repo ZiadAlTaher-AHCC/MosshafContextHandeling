@@ -22,8 +22,8 @@ public partial class Quran3
     [OldName("GVerse")]
     public string Gverse { get; set; }
 
-    [OldName("Sverse")]
-    public string Sverse { get; set; }
+    //[OldName("Sverse")]
+    //public string Sverse { get; set; }
     [OldName("Meaning1")]
     public string Meaning1 { get; set; }
     [OldName("Meaning2")]
@@ -50,8 +50,8 @@ public partial class Quran3
     [OldName("kortoby")]
     public string Kortoby { get; set; }
 
-    [OldName("safwa")]
-    public string Safwa { get; set; }
+    //[OldName("safwa")]
+    //public string Safwa { get; set; }
 
     [OldName("ibnkathir")]
     public string Ibnkathir { get; set; }

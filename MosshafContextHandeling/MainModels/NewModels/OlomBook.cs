@@ -23,15 +23,15 @@ public partial class OlomBook
     [OldName("Field_q")]
     public string FieldQ { get; set; }
 
-    [OldName("details")]
-    public string Details { get; set; }
+    //[OldName("details")]
+    //public string Details { get; set; }
 
-    [OldName("feature")]
-    public int? Feature { get; set; }
+    //[OldName("feature")]
+    //public int? Feature { get; set; }
 
-    [OldName("date")]
-    public int? Date { get; set; }
+    //[OldName("date")]
+    //public int? Date { get; set; }
 
-    [OldName("active")]
-    public short? Active { get; set; }
+    //[OldName("active")]
+    //public short? Active { get; set; }
 }

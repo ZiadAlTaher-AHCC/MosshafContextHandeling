@@ -64,8 +64,8 @@ public partial class KaratQuran
     public short? Upd { get; set; } //TODO: for what is this column
 
     [OldName("up_time")]
-    public DateTime? UpTime { get; set; } //TODO: for what is this column
-    
+    public DateTime? UpTime { get; set; } //TODO: Upload time 
+
     //[ForeignKey(nameof(QuranId))]
     //public Quran Quran { get; set; }
 }

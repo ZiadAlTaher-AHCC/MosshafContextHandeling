@@ -48,9 +48,9 @@ public partial class TafseerPage
     [OldName("m_quranid")]
     public int MQuranid { get; set; }
 
-    [OldName("cheak_repater")]
-    public int CheakRepater { get; set; }
+    //[OldName("cheak_repater")]
+    //public int CheakRepater { get; set; }
 
-    [OldName("updateTime")]
-    public DateTime UpdateTime { get; set; }
+    //[OldName("updateTime")]
+    //public DateTime UpdateTime { get; set; }
 }

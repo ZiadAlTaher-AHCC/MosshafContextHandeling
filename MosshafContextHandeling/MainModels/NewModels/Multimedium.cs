@@ -48,8 +48,8 @@ public partial class Multimedia
     [OldName("status")]
     public short? Status { get; set; }
 
-    [OldName("homepage")]
-    public short? HomePage { get; set; }
+    //[OldName("homepage")]
+    //public short? HomePage { get; set; }
 
     //[OldName("facebook_like")]
     //public int? FacebookLike { get; set; } //TODO : why is this column needed
@@ -78,8 +78,8 @@ public partial class Multimedia
     [OldName("lang")]
     public int? LanguageId { get; set; } //TODO: is this a foreign key?
 
-    [OldName("user_add")]
-    public int? UserAdd { get; set; }
+    //[OldName("user_add")]
+    //public int? UserAdd { get; set; }
 
     [OldName("create_date")]
     public DateTime? CreateDate { get; set; }

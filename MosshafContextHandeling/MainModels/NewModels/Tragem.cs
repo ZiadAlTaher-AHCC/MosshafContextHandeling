@@ -171,6 +171,6 @@ public partial class Tragem
     [OldName("german2")]
     public string German2 { get; set; }
 
-    [OldName("fh")]
-    public string Fh { get; set; }
+    //[OldName("fh")]
+    //public string Fh { get; set; }
 }
