@@ -17,17 +17,17 @@ public partial class Olom
     [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("Matn")]
+    [OldName("matn")]
     public string Matn { get; set; }
 
-    [OldName("ChapterId")]
+    [OldName("chapter_id")]
     public int? ChapterId { get; set; } // foreign key to OlomChapter
-    [OldName("BabId")]
+    [OldName("bab_id")]
     public int? BabId { get; set; } // foreign key to OlomBab
 
-    [OldName("SubBabId")]
+    [OldName("sub_bab_id")]
     public int? SubBabId { get; set; } // foreign key to OlomSubBab
 
-    [OldName("OlomBookId")]
+    [OldName("olom_book_id")]
     public int? OlomBookId { get; set; } // foreign key to OlomBook
 }

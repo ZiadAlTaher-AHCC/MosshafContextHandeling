@@ -14,21 +14,21 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("olom_sub_bab")]
 public partial class OlomSubBab
 {
-    [OldName("Id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("ChapterId")]
+    [OldName("chapter_id")]
     public int? ChapterId { get; set; } // Foreign Key to OlomChapter
 
-    [OldName("OlomBookId")]
+    [OldName("olom_book_id")]
     public int? OlomBookId { get; set; } // Foreign Key to OlomBook
 
-    [OldName("Name")]
+    [OldName("name")]
     public string Name { get; set; } // Sub Bab Name
 
-    [OldName("BabId")]
+    [OldName("bab_id")]
     public int? BabId { get; set; } // Foreign Key to OlomBab
 
-    [OldName("SubBabId")]
+    [OldName("sub_bab_id")]
     public int? SubBabId { get; set; } // Sub Bab Identifier
 }

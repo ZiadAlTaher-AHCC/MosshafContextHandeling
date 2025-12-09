@@ -17,21 +17,21 @@ public partial class OlomBook
     [OldName("Id")]
     public int? Id { get; set; }
 
-    [OldName("Book")]
+    [OldName("book")]
     public string Book { get; set; }
 
-    [OldName("FieldQ")]
+    [OldName("Field_q")]
     public string FieldQ { get; set; }
 
-    [OldName("Details")]
+    [OldName("details")]
     public string Details { get; set; }
 
-    [OldName("Feature")]
+    [OldName("feature")]
     public int? Feature { get; set; }
 
-    [OldName("Date")]
+    [OldName("date")]
     public int? Date { get; set; }
 
-    [OldName("Active")]
+    [OldName("active")]
     public short? Active { get; set; }
 }

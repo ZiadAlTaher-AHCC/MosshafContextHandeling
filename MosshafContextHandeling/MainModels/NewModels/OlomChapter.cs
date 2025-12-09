@@ -14,16 +14,16 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("OlomChapter")]
 public partial class OlomChapter
 {
-    [OldName("Id")]
+    [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("Name")]
+    [OldName("name")]
     [StringLength(255)]
     public string Name { get; set; }
 
-    [OldName("OlomBookId")]
+    [OldName("olom_book_id")]
     public int? OlomBookId { get; set; } // foreign key to OlomBook
 
-    [OldName("ChapterId")]
+    [OldName("chapter_id")]
     public int? ChapterId { get; set; } // foreign key to Chapter
 }
