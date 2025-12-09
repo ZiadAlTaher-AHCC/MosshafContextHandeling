@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("tafseer_book", Schema = "quran_quran2")]
 [Index("Feature", Name = "feature")]
+[OldName("tafseer_book")]
 public partial class TafseerBook
 {
     [Key]

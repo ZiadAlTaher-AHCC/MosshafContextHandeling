@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
 //[Table("tagwed", Schema = "quran_quran2")]
+[OldName("tagwed")]
 public partial class Tagwed
 {
     [OldName("QuranID")]
@@ -30,7 +31,7 @@ public partial class Tagwed
     [StringLength(50)]
     public string SuraName { get; set; }
     [OldName("SuraNo")]
-    public int? SuraNo { get; set; }
+    public int? SuraNo { get; set; } // Foreign Key to Sura table
 
     [Required]
     [OldName("tagwed")]

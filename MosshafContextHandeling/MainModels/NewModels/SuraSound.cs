@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("sura_sound", Schema = "quran_quran2")]
+[OldName("sura_sound")]
 public partial class SuraSound
 {
     [Key]

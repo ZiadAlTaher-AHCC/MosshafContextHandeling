@@ -11,6 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
 ////[Table("quran_sound", Schema = "quran_quran2")]
+[OldName("quran_sound")]
 public partial class QuranSound
 {
     [OldName("QuranID")]
@@ -55,7 +56,7 @@ public partial class QuranSound
     public string Verse { get; set; }
 
     [OldName("search_ayaa")]
-    public string SearchAyaa { get; set; }
+    public string SearchAyaa { get; set; } // tODO: what is this field
 
     [OldName("no_of_words")]
     public int? NoOfWords { get; set; }

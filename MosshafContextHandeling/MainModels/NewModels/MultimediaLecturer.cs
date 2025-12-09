@@ -33,7 +33,7 @@ public partial class MultimediaLecturer
     public string Descripton { get; set; }
 
     [OldName("user_add")]
-    public int? UserAdd { get; set; }
+    public int? UserAdd { get; set; } //TODO: for what is this column
 
     [OldName("create_date")]
     public DateTime? CreateDate { get; set; }

@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("tafseer_english", Schema = "quran_quran2")]
+[OldName("tafseer_english")]
 public partial class TafseerEnglish
 {
     [Key]
@@ -31,7 +32,7 @@ public partial class TafseerEnglish
     public int? PartNo { get; set; }
     [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-
+    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
     [OldName("SuraNo")]

@@ -10,6 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 //[Table("tagwed_book", Schema = "quran_quran2")]
+[OldName("tagwed_book")]
 public partial class TagwedBook
 {
     [Key]
@@ -20,5 +21,5 @@ public partial class TagwedBook
     public string Book { get; set; }
 
     [OldName("Field_q")]
-    public string FieldQ { get; set; }
+    public string FieldQ { get; set; } // TODO: rename to MappedColumnName
 }
