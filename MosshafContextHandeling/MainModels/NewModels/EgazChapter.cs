@@ -9,13 +9,8 @@ using MosshafContextHandeling.Helpers;
 using MosshafContextHandeling.Models;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-/// <summary>
-/// old name : e3gaz_chapters
-/// </summary>
+
 [OldName("e3gaz_chapters")]
-// //[Table("e3gaz_chapters")]
-// [Index("ChapterId", Name = "chapter_id")]
-// [Index("E3gazBookId", Name = "hadith_bab_id_idx")]
 public partial class EgazChapter
 {
     [OldName("id")]

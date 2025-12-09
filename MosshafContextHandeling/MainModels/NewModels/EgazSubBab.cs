@@ -8,30 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-/// <summary>
-/// old name: e3gaz_sub_bab
-/// </summary>
+
 [OldName("e3gaz_sub_bab")]
-//[Table("e3gaz_sub_bab")]
-// [Index("BabId", Name = "bab_id")]
-// [Index("ChapterId", Name = "chapter_id")]
-// [Index("E3gazBookId", Name = "e3gaz_book_id")]
-// [Index("Id", Name = "id")]
-// [Index("SubBabId", Name = "sub_bab_id")]
 public partial class EgazSubBab
 {
     [OldName("id")]
     [Key]
-    // [Column("id")]
     public int Id { get; set; }
 
     [OldName("chapter_id")]
-    // [Column("chapter_id")]
-    public int ChapterId { get; set; }
+    public int EgazChapterId { get; set; }
 
-    /// <summary>
-    /// old name: e3gaz_book_id
-    /// </summary>
     [OldName("e3gaz_book_id")]
     public int EgazBookId { get; set; }
 
@@ -39,27 +26,21 @@ public partial class EgazSubBab
     [Required]
     public string Name { get; set; }
 
-    /// <summary>
-    /// old name: bab_id
-    /// </summary>
     [OldName("bab_id")]
-    public int BabId { get; set; }
+    public int EgazBabId { get; set; }
 
-    /// <summary>
-    /// old name: sub_bab_id
-    /// </summary>
     [OldName("sub_bab_id")]
-    public int SubBabId { get; set; }
+    public int SubBabId { get; set; } //مفيش فرق بينه و بين id
 
     //// Navigation
     //[ForeignKey(nameof(EgazBookId))]
-    //public EgazBook Book { get; set; }
+    //public EgazBook EgazBook { get; set; }
 
     //[ForeignKey(nameof(ChapterId))]
-    //public EgazChapter Chapter { get; set; }
+    //public EgazChapter EgazChapter { get; set; }
 
     //[ForeignKey(nameof(BabId))]
-    //public EgazBab Bab { get; set; }
+    //public EgazBab EgazBab { get; set; }
 
     //public ICollection<Egaz> Items { get; set; }
 }

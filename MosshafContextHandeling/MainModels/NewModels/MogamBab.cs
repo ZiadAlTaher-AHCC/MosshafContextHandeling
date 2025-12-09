@@ -16,17 +16,18 @@ public partial class MogamBab
     public int Id { get; set; }
 
     [OldName("chapter_id")]
-    public int ChapterId { get; set; }
-
-    [OldName("bab_id")]
-    public int BabId { get; set; }
+    public int MogamChapterId { get; set; }
 
     [OldName("name")]
     public string Name { get; set; }
     
-    [OldName("MogamBookId")]
+    [OldName("book_id")]
     public int MogamBookId { get; set; }
 
     //[ForeignKey(nameof(MogamBookId))]
     //public MogamBook MogamBook { get; set; }
+
+    //[ForeignKey(nameof(MogamChapterId))]
+    //public Chapter MogamChapter { get; set; }
+
 }

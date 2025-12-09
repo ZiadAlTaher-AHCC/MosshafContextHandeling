@@ -10,20 +10,24 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("chapter")]
-//[Table("chapter")]
-public partial class Chapter
+public partial class MogamChapter //TODO: rename to MogamChapter
 {
     [OldName("id")]
     [Key]
     public int Id { get; set; }
 
     [OldName("chapter_id")]
-    public int ChapterId { get; set; } //TODO: if it isn't a forignkey change to ChapterNumber  
+    public int ChapterNo { get; set; } //TODO: if it isn't a forignkey change to ChapterNumber  دول متخزن فيهم ارقامهم على حسب حروف اللغه العربيه 
 
     [OldName("name")]
     [Required]
     public string Name { get; set; }
 
+
     [OldName("book_id")]
-    public int BookId { get; set; }
+    public int BookId { get; set; } // Foreign key to MogamBook 1,10,20
+    //public MogamBook MogamBook { get; set; } // Navigation property
+
+    //public ICollection<MogamBab> MogamBabs { get; set; }
+
 }

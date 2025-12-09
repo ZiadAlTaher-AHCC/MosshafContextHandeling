@@ -9,11 +9,8 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-/// <summary>
-/// old name: E3gaz Table
-/// </summary>
+
 [OldName("e3gaz")]
-//[Table("e3gaz")]
 public partial class Egaz 
 {
     [OldName("id")]
@@ -22,7 +19,7 @@ public partial class Egaz
 
     [OldName("matn")]
     [Required]
-    public string Matn { get; set; }
+    public string Nass { get; set; }
     
     [OldName("chapter_id")]
     public int EgazChapterId { get; set; }
@@ -31,7 +28,7 @@ public partial class Egaz
     public int EgazBabId { get; set; }
     
     [OldName("sub_bab_id")]
-    public int EgazSubBabId { get; set; }
+    public int EgazSubBabId { get; set; }//TODO : We Can move the sub bab to babs
     
     [OldName("e3gaz_book_id")]
     public int EgazBookId { get; set; }

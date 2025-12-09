@@ -14,22 +14,26 @@ public partial class Mogam
     [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("chapter_id")]
-    public int? ChapterId { get; set; }
-
-    [OldName("bab_id")]
-    public int? BabId { get; set; }
-
-    [OldName("1text")]
-    public string _1text { get; set; } //TODO: why this is named like that ?  rename it to something more meaningfull
+    //[OldName("1text")]
+    //public string _1text { get; set; } 
 
     [OldName("bab_name")]
     public string BabName { get; set; }
 
     [OldName("text")]
-    public string Text { get; set; }// TODO : what is this column for ?
+    public string Nass { get; set; }
+
+    //Navigation Properties
+    [OldName("chapter_id")]
+    public int? MogamChapterId { get; set; }
+
+    [OldName("bab_id")]
+    public int? MogamBabId { get; set; }
 
     [OldName("book_id")]
-    public int? BookId { get; set; } // TODO : this is foreign key to which table ?
-                                     // public  MogamBook? Book { get; set; } // Navigation property
+    public int? MogamBookId { get; set; }
+
+    //public  MogamBook? MogamBook { get; set; } // Navigation property
+    //public MogamChapter? MogamChapter { get; set; } // Navigation property
+    //public MogamBab? MogamBab { get; set; } // Navigation property
 }

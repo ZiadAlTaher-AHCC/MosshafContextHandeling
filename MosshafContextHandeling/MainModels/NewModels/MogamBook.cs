@@ -17,11 +17,7 @@ public partial class MogamBook
     [OldName("name")]
     public string Name { get; set; }
 
-    // [OldName("about")]
-    // public string About { get; set; }
 
-    // [OldName("date")]
-    // public int? Date { get; set; }
-    
-    //public ICollection<MogamBab> MogamBabs { get; set; }
+    //public ICollection<MogamChapter> MogamChapters { get; set; }
+    ////public ICollection<MogamBab> MogamBabs { get; set; }
 }

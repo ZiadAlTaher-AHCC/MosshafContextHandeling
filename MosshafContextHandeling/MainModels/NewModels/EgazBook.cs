@@ -11,9 +11,6 @@ using MosshafContextHandeling.Models;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("e3gaz_book")]
-// //[Table("e3gaz_book")]
-// [Index("Feature", Name = "feature")]
-// [Index("Id", Name = "id")]
 public partial class EgazBook
 {
     [OldName("id")]
@@ -26,20 +23,8 @@ public partial class EgazBook
 
     [OldName("Field_q")]
     [Required]
-    public string MappedColumnName { get; set; }
+    public string MappedColumnName { get; set; }//TODO: Rename to not used 
 
-    //[OldName("details")]
-    //[Required]
-    //public string Details { get; set; }
-
-    //[OldName("feature")]
-    //public int Feature { get; set; } // TODO: For what?
-
-    //[OldName("date")]
-    //public int Date { get; set; }
-
-    //[OldName("active")]
-    //public short Active { get; set; } //TODO: is it used ?
 
     // // Navigation
     // public ICollection<EgazChapter> Chapters { get; set; }
