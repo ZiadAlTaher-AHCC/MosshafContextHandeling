@@ -18,36 +18,10 @@ public partial class MultimediaCategory
     [StringLength(300)]
     public string Name { get; set; }
 
-    //[OldName("description")]
-    //[StringLength(500)]
-    //public string Description { get; set; }
-
-    //[OldName("view")]
-    //// [Column("view")]
-    //public int? View { get; set; }
-
-    //[OldName("photo")]
-    //[StringLength(400)]
-    //public string Photo { get; set; }
-
     [OldName("type")]
-    public int? Type { get; set; }
-
-    //[OldName("sort")]
-    //public int? Sort { get; set; }
-
-    // [OldName("user_add")]
-    // public int? UserAdd { get; set; } 
-
-    [OldName("create_date")]
-    public DateTime? CreateDate { get; set; }
-
-    [OldName("status")]
-    public short? Status { get; set; }
+    public int? Type { get; set; } // TODO: (غير مستخدم)
 
     [OldName("lang")]
-    public int? LanguageId { get; set; } // TODO: should be a forign key 
+    public int? LanguageId { get; set; } // TODO: should be a forign key (غير مستخدم)
 
-    //[OldName("section_type")]
-    //public int? SectionType { get; set; }
 }

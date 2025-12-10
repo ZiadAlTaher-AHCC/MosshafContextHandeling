@@ -9,7 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("moshabeh")]
-public partial class Moshabeh
+public partial class Moshabeh // عباس بيقول ان جا المستخدم 
 {
     [OldName("QuranID")]
     public int? QuranId { get; set; } // Navigation property

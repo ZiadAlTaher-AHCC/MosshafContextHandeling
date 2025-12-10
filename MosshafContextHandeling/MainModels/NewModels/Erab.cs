@@ -28,16 +28,16 @@ public partial class Erab
     public int? SuraNo { get; set; }
 
     [OldName("SuraName")]
-    public string SuraName { get; set; }
+    public string SuraName { get; set; } 
 
     [OldName("na7as")]
     public string Nahas { get; set; }
 
-    [OldName("bakoly")]
-    public string Bakoly { get; set; }
+    //[OldName("bakoly")]
+    //public string Bakoly { get; set; }
 
-    [OldName("akbry")]
-    public string Akbry { get; set; }
+    //[OldName("akbry")]
+    //public string Akbry { get; set; }
 
     [OldName("kharat")]
     public string Kharat { get; set; }

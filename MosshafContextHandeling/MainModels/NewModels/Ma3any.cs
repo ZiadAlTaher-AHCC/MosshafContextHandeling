@@ -11,7 +11,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("ma3any")]
 public partial class Maany
-{
+{ 
     [OldName("QuranID")]
     public int? QuranId { get; set; }
 

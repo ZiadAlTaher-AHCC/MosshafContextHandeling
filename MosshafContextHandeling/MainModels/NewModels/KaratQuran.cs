@@ -10,7 +10,7 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [OldName("karat_quran")]
-public partial class KaratQuran
+public partial class KaratQuran // مش مكتوب عند عباس 
 {
     [OldName("id")]
     public int? Id { get; set; }
@@ -43,7 +43,7 @@ public partial class KaratQuran
     public int? KaratPage { get; set; }
 
     [OldName("karat_type")]
-    public int? KaratType { get; set; } //TODO: is this is a foreign key
+    public int? KaratId { get; set; } 
 
     [OldName("status")]
     public int? Status { get; set; }

@@ -13,27 +13,15 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("Quran")]
 public partial class Quran
 {
-    /// <summary>
-    /// old name: id
-    /// </summary>
     [OldName("id")]
     public int? Id { get; set; }
 
-    /// <summary>
-    /// old name: QuranID
-    /// </summary>
     [OldName("QuranID")]
     public int? QuranId { get; set; }  
-
-    /// <summary>
-    /// old name: verse
-    /// </summary>
+    
     [OldName("verse")]
     public string Verse { get; set; }
 
-    /// <summary>
-    /// old name: verseNoSign
-    /// </summary>
     [OldName("verseNoSign")]
     public string VerseNoSign { get; set; }
     [OldName("PageNo")]
@@ -41,15 +29,9 @@ public partial class Quran
     [OldName("PartNo")]
     public int? PartNo { get; set; }
 
-    /// <summary>
-    /// old name: hezbNo
-    /// </summary>
     [OldName("hezbNo")]
     public int? HezbNo { get; set; }
 
-    /// <summary>
-    /// old name: rob3No
-    /// </summary>
     [OldName("rob3No")]
     public int? RobNo { get; set; }
     [OldName("VerseNo")]
@@ -61,33 +43,18 @@ public partial class Quran
     [OldName("SuraName")]
     public string SuraName { get; set; }
 
-    /// <summary>
-    /// old name: sound
-    /// </summary>
     [OldName("sound")]
     public string Sound { get; set; }
 
-    /// <summary>
-    /// old name: img_warsh
-    /// </summary>
     [OldName("img_warsh")]
     public string ImgWarsh { get; set; }
 
-    /// <summary>
-    /// old name: search_ayaa
-    /// </summary>
     [OldName("search_ayaa")]
     public string SearchAyaa { get; set; }
 
-    /// <summary>
-    /// old name: verse3_old
-    /// </summary>
     [OldName("verse3_old")]
     public string VerseOld { get; set; }
 
-    /// <summary>
-    /// old name: 2verse
-    /// </summary>
     [OldName("2verse")]
     public string  verse { get; set; }
 }

@@ -9,8 +9,6 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-////[Table("sura", Schema = "quran_quran2")]
-[OldName("sura")]
 public partial class Sura
 {
     [OldName("SuraNo")]
@@ -31,11 +29,48 @@ public partial class Sura
     [StringLength(255)]
     public string Title { get; set; }
 
-    [OldName("karat_type")]
-    public int KaratType { get; set; }
 
-    [OldName("master")]
-    public int Master { get; set; }
+    [Required]
+    [OldName("sabb_tasmia")]
+    public string SabbTasmia { get; set; }
+
+    [Required]
+    [OldName("ta3reef")]
+    public string Taareef { get; set; }
+
+    [Required]
+    [OldName("mwadee3")]
+    public string Mwadee { get; set; }
+
+    [Required]
+    [OldName("sabb_nzol")]
+    public string SabbNzol { get; set; }
+
+    [Required]
+    [OldName("fadl")]
+    public string Fadl { get; set; } // TODO: For what?
+}
+
+public partial class SuraDetail
+{
+    [OldName("SuraNo")]
+    [Key]
+    public long SuraNo { get; set; }
+    [OldName("SuraName")]
+    [StringLength(50)]
+    public string SuraName { get; set; }
+    [OldName("Verses")]
+    public int? Verses { get; set; }
+    [OldName("Type")]
+    [Required]
+    [StringLength(255)]
+    public string Type { get; set; }
+
+    [Required]
+    [OldName("title")]
+    [StringLength(255)]
+    public string Title { get; set; }
+
 
     [Required]
     [OldName("sabb_tasmia")]

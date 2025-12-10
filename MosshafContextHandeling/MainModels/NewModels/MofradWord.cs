@@ -9,7 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("mofrad_words")]
-public partial class MofradWord
+public partial class MofradWord // مش مكتوب عند عباس 
 {
     [OldName("id")]
     public int? Id { get; set; }

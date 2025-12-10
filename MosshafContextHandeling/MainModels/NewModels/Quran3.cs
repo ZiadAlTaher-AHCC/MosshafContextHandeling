@@ -12,7 +12,7 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 [Keyless]
 ////[Table("quran3", Schema = "quran_quran2")]
 [OldName("quran3")]
-public partial class Quran3
+public partial class Quran3 // عباس مجابش سيرتها 
 {
     [OldName("QuranID")]
     public int? QuranId { get; set; } // primary key

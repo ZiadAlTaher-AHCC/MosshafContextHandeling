@@ -18,8 +18,6 @@ public partial class Multimedia
     [OldName("src")]
     public string Src { get; set; }
 
-    [OldName("photo")]
-    public string Photo { get; set; }
 
     [OldName("title")]
     public string Title { get; set; }
@@ -27,53 +25,24 @@ public partial class Multimedia
     [OldName("lecturer")]
     public int? Lecturer { get; set; }
 
-    [OldName("sura")]
-    public int? Sura { get; set; }
+    //[OldName("sura")]
+    //public int? Sura { get; set; }
 
     [OldName("type")]
     public int? Type { get; set; }
 
-    [OldName("publish_status")]
-    public DateTime? PublishStatus { get; set; }
+    //[OldName("publish_status")]
+    //public DateTime? PublishStatus { get; set; }
 
     [OldName("description")]
     public string Description { get; set; }
 
     [OldName("categories")]
-    public int? Categories { get; set; }
+    public int? CategoryId { get; set; }//TODO: is this a foreign key?
 
     [OldName("view")]
     public int? View { get; set; }
 
-    [OldName("status")]
-    public short? Status { get; set; }
-
-    //[OldName("homepage")]
-    //public short? HomePage { get; set; }
-
-    //[OldName("facebook_like")]
-    //public int? FacebookLike { get; set; } //TODO : why is this column needed
-
-    //[OldName("facebook_comment")]
-    //public int? FacebookComment { get; set; }
-
-    //[OldName("facebook_share")]
-    //public int? FacebookShare { get; set; }
-
-    //[OldName("facebook_commentbox")]
-    //public int? FacebookCommentBox { get; set; }
-
-    //[OldName("facebook_total_count")]
-    //public int? FacebookTotalCount { get; set; }
-
-    //[OldName("linkedin_count")]
-    //public int? LinkedinCount { get; set; }
-
-    //[OldName("total_socialmedia")]
-    //public int? TotalSocialmedia { get; set; }
-
-    //[OldName("twitter_count")]
-    //public int? TwitterCount { get; set; }
 
     [OldName("lang")]
     public int? LanguageId { get; set; } //TODO: is this a foreign key?

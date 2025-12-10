@@ -9,7 +9,6 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-//[Table("tragem_book", Schema = "quran_quran2")]
 [OldName("tragem_book")]
 public partial class TragemBook
 {
@@ -24,9 +23,4 @@ public partial class TragemBook
     [OldName("Field_q")]
     public string FieldQ { get; set; }
 
-    //[OldName("active")]
-    //public int Active { get; set; }
-
-    //[OldName("status")]
-    //public short Status { get; set; }
 }

@@ -44,7 +44,7 @@ public partial class QuranSound
 
     [OldName("sound")]
     [StringLength(10)]
-    public string Sound { get; set; }
+    public string Sound { get; set; } // h 
 
     [OldName("id")]
     public int? Id { get; set; }

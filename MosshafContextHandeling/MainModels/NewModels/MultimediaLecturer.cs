@@ -19,9 +19,6 @@ public partial class MultimediaLecturer
     [StringLength(1000)]
     public string Name { get; set; }
 
-    // [OldName("creat_date")]
-    // public DateTime? CreatDate { get; set; }
-
     [OldName("status")]
     public short? Status { get; set; }
 
@@ -32,9 +29,4 @@ public partial class MultimediaLecturer
     [OldName("descripton")]
     public string Descripton { get; set; }
 
-    //[OldName("user_add")]
-    //public int? UserAdd { get; set; } //TODO: for what is this column
-
-    //[OldName("create_date")]
-    //public DateTime? CreateDate { get; set; }
 }

@@ -16,10 +16,5 @@ public partial class Ma3anyBook
 
     [OldName("name")]
     public string Name { get; set; }
-
-    // [OldName("about")]
-    // public string About { get; set; } // TODO: for what is this column
-
-    // [OldName("date")]
-    // public int? Date { get; set; } // TODO: for what is this column
+    //ناقص كتاب مخلوف ف الداتا
 }

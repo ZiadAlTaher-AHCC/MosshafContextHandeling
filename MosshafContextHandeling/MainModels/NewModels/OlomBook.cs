@@ -10,7 +10,6 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-////[Table("olom_book", Schema = "quran_quran2")]
 [OldName("olom_book")]
 public partial class OlomBook
 {
@@ -23,15 +22,4 @@ public partial class OlomBook
     [OldName("Field_q")]
     public string FieldQ { get; set; }
 
-    //[OldName("details")]
-    //public string Details { get; set; }
-
-    //[OldName("feature")]
-    //public int? Feature { get; set; }
-
-    //[OldName("date")]
-    //public int? Date { get; set; }
-
-    //[OldName("active")]
-    //public short? Active { get; set; }
 }

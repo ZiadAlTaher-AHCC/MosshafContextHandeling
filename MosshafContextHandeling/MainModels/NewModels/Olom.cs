@@ -10,9 +10,8 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-////[Table("olom", Schema = "quran_quran2")]
 [OldName("olom")]
-public partial class Olom
+public partial class Olom 
 {
     [OldName("id")]
     public int? Id { get; set; }

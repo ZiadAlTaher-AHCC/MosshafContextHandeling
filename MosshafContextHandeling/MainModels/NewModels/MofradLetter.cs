@@ -9,7 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("mofrad_letters")]
-public partial class MofradLetter
+public partial class MofradLetter // ممكن يكون واخد دول راسمهم في الحاجات زي فهرس بداية الايات
 {
     [OldName("id")]
     public int? Id { get; set; }

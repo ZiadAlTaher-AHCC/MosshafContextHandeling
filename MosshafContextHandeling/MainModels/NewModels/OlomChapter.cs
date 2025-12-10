@@ -10,7 +10,6 @@ using MosshafContextHandeling.Helpers;
 namespace MosshafContextHandeling.MainModels.NewModels;
 
 [Keyless]
-//[Table("olom_chapters", Schema = "quran_quran2")]
 [OldName("OlomChapter")]
 public partial class OlomChapter
 {

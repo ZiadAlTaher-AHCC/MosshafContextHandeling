@@ -9,7 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("mogam_words")]
-public partial class MogamWord
+public partial class MogamWord // عباس بيقول انها مستخدمه في فهرس بداية الايات 
 {
     [OldName("id")]
     public int? Id { get; set; }

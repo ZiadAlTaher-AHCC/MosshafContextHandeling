@@ -9,7 +9,7 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 [OldName("karat_quran_org")]
-public partial class KaratQuranOrg
+public partial class KaratQuranOrg // مش مكتوب عند عباس 
 {
 
     public int Id { get; set; }
