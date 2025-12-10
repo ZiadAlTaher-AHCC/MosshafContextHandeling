@@ -9,52 +9,19 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Keyless]
-[OldName("Quran")]
-public partial class Quran
+public partial class Aya
 {
-    [OldName("id")]
-    public int? Id { get; set; }
-
-    [OldName("QuranID")]
-    public int? QuranId { get; set; }  
-    
-    [OldName("verse")]
-    public string Verse { get; set; }
-
-    [OldName("verseNoSign")]
+    public int? Id { get; set; }    
+    public string? Verse { get; set; }
     public string VerseNoSign { get; set; }
-    [OldName("PageNo")]
     public int? PageNo { get; set; }
-    [OldName("PartNo")]
     public int? PartNo { get; set; }
-
-    [OldName("hezbNo")]
     public int? HezbNo { get; set; }
-
-    [OldName("rob3No")]
     public int? RobNo { get; set; }
-    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-    [OldName("VerseNoAr")]
     public string VerseNoAr { get; set; }
-    [OldName("SuraNo")]
     public int? SuraNo { get; set; } // Navigation property to Sura
-    [OldName("SuraName")]
-    public string SuraName { get; set; }
-
-    [OldName("sound")]
-    public string Sound { get; set; }
-
-    [OldName("img_warsh")]
-    public string ImgWarsh { get; set; }
-
-    [OldName("search_ayaa")]
-    public string SearchAyaa { get; set; }
-
-    [OldName("verse3_old")]
-    public string VerseOld { get; set; }
-
-    [OldName("2verse")]
-    public string  verse { get; set; }
+    public string? SuraName { get; set; }
+    public string? Sound { get; set; }
+    public string? ImgWarsh { get; set; }
 }

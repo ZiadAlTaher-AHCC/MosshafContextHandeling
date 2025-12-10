@@ -8,13 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-[OldName("karat_list")]
 public partial class KaratList
 {
-    [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("name")]
     [StringLength(255)]
     public string Name { get; set; } 
 }

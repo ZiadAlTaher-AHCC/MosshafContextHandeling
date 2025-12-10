@@ -8,13 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-[OldName("ma3any_book")]
-public partial class Ma3anyBook
+public partial class MaanyBook
 {
-    [OldName("id")]
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
-    [OldName("name")]
     public string Name { get; set; }
     //ناقص كتاب مخلوف ف الداتا
+
+    //public virtual ICollection<Maany>? Maanies { get; set; } = new List<Maany>();
 }

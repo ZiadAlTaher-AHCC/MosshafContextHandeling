@@ -9,19 +9,14 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[OldName("ma3any")]
 public partial class Maany
 { 
-    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
-    [OldName("PageNo")]
     public int? PageNo { get; set; }
 
-    [OldName("ma3any")]
-    public string Text { get; set; }
+    public string? Text { get; set; }
     
-    [OldName("book_id")]
-    public int? BookId { get; set; }
-    // public  Ma3anyBook? Book { get; set; } // Navigation property
+    public int? MaanyBookId { get; set; }
+    //public  MaanyBook? MaanyBook { get; set; } // Navigation property
 }

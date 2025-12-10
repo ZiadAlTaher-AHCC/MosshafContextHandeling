@@ -11,84 +11,30 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 
 public partial class Sura
 {
-    [OldName("SuraNo")]
-    [Key]
-    public long SuraNo { get; set; }
-    [OldName("SuraName")]
-    [StringLength(50)]
-    public string SuraName { get; set; }
-    [OldName("Verses")]
-    public int? Verses { get; set; }
-    [OldName("Type")]
-    [Required]
-    [StringLength(255)]
-    public string Type { get; set; }
-
-    [Required]
-    [OldName("title")]
-    [StringLength(255)]
-    public string Title { get; set; }
-
-
-    [Required]
-    [OldName("sabb_tasmia")]
-    public string SabbTasmia { get; set; }
-
-    [Required]
-    [OldName("ta3reef")]
-    public string Taareef { get; set; }
-
-    [Required]
-    [OldName("mwadee3")]
-    public string Mwadee { get; set; }
-
-    [Required]
-    [OldName("sabb_nzol")]
-    public string SabbNzol { get; set; }
-
-    [Required]
-    [OldName("fadl")]
-    public string Fadl { get; set; } // TODO: For what?
+    public int Id { get; set; }
+    public int? SuraNo { get; set; }
+    [MaxLength(50)]
+    public string? SuraName { get; set; }
+    public int? VersesNumber { get; set; }
+    [MaxLength(20)]
+    public string? Type { get; set; }
 }
 
 public partial class SuraDetail
 {
-    [OldName("SuraNo")]
-    [Key]
-    public long SuraNo { get; set; }
-    [OldName("SuraName")]
-    [StringLength(50)]
-    public string SuraName { get; set; }
-    [OldName("Verses")]
-    public int? Verses { get; set; }
-    [OldName("Type")]
-    [Required]
-    [StringLength(255)]
-    public string Type { get; set; }
+    public int Id { get; set; }
+    public int? SuraId { get; set; }
 
-    [Required]
-    [OldName("title")]
-    [StringLength(255)]
-    public string Title { get; set; }
+    public string? Title { get; set; }
 
+    public string? SabbTasmia { get; set; }
 
-    [Required]
-    [OldName("sabb_tasmia")]
-    public string SabbTasmia { get; set; }
+    public string? Taareef { get; set; }
 
-    [Required]
-    [OldName("ta3reef")]
-    public string Taareef { get; set; }
+    public string? SabbNzol { get; set; }
 
-    [Required]
-    [OldName("mwadee3")]
-    public string Mwadee { get; set; }
+    public string? Fadl { get; set; } // TODO: For what?
 
-    [Required]
-    [OldName("sabb_nzol")]
-    public string SabbNzol { get; set; }
+    public string? Mwadee { get; set; }
 
-    [Required]
-    [OldName("fadl")]
-    public string Fadl { get; set; } // TODO: For what?
 }

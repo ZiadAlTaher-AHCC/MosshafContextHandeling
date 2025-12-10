@@ -9,26 +9,19 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-//[Table("reciters", Schema = "quran_quran2")]
-[OldName("reciters")]
-public partial class Reciter
+/// <summary>
+//بالعربي بقا جدول القراء 
+/// </summary>
+public partial class Reciter 
 {
-    [Key]
-    [OldName("ReciterID")]
-    public int ReciterId { get; set; }
+    public int Id { get; set; }
 
-    [Required]
-    [OldName("ar_name")]
     public string ArName { get; set; }
 
-    [Required]
-    [OldName("en_name")]
     public string EnName { get; set; }
 
-    [Required]
-    [OldName("folder")]
     public string Folder { get; set; }
 
-    [OldName("karat")]
-    public int Karat { get; set; } // nivgation property to reciter_karat
+    public int KaratId { get; set; } // nivgation property to reciter_karat
+
 }

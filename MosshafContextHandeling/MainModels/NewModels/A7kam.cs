@@ -11,60 +11,35 @@ namespace MosshafContextHandeling.MainModels.NewModels;
 /// <summary>
 /// old a7kam
 /// </summary>
-[OldName("Ahkam")]
-[Keyless]
-//[Table("ahkam" )]
 public partial class Ahkam
 {
 
-    [OldName("id")]
-    [Key]
     public int Id { get; set; }
 
-    [OldName("QuranID")]
     public int? QuranId { get; set; }
 
-    [OldName("Verse")]
     public string Verse { get; set; }
 
-    [OldName("PageNo")]
     public int? PageNo { get; set; }
 
-    [OldName("PartNo")]
     public int? PartNo { get; set; }
 
-    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
 
-    [OldName("SuraNo")]
     public int? SuraNo { get; set; }
 
-    [OldName("SuraName")]
-    [StringLength(50)]
     public string SuraName { get; set; }
 
-    [OldName("araby")]
-    [Required]
     public string Araby { get; set; }//TODO: Referes to what  => ابن العربي 
 
-    [OldName("gasas")]
-    [Required]
     public string Gasas { get; set; }//TODO: Referes to what  => الجصاص
 
-    [OldName("rwaee")]
-    [Required]
     public string Rwaee { get; set; } //TODO: Referes to what => روائع البيان
 
-    [OldName("gah")]
-    [Required]
     public string Gah { get; set; } //TODO: Referes to what  => الجهضمي
 
-    [OldName("maram")]
-    [Required]
     public string Maram { get; set; }//TODO: Referes to what  => نيل المرام
 
-    [OldName("kia")]
-    [Required]
     public string Kia { get; set; } //TODO: Referes to what  => كيا هرسي
 
 }
