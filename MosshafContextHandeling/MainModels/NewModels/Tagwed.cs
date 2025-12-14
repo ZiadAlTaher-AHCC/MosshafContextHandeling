@@ -9,35 +9,20 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Keyless]
-//[Table("tagwed", Schema = "quran_quran2")]
-[OldName("tagwed")]
 public partial class Tagwed
 {
-    [OldName("QuranID")]
     public int? QuranId { get; set; } // Foreign Key to Quran.ID
-    [OldName("Verse")]
     public string Verse { get; set; }
 
-    [OldName("GVerse")]
     public string Gverse { get; set; }
-    [OldName("PageNo")]
     public int? PageNo { get; set; }
-    [OldName("PartNo")]
     public int? PartNo { get; set; }
-    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-    [OldName("SuraName")]
     [StringLength(50)]
     public string SuraName { get; set; }
-    [OldName("SuraNo")]
     public int? SuraNo { get; set; } // Foreign Key to Sura table
 
-    [Required]
-    [OldName("tagwed")]
     public string Tagwed1 { get; set; }
 
-    [Required]
-    [OldName("tagen")]
     public string Tagen { get; set; }
 }

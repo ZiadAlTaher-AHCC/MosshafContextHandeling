@@ -9,18 +9,12 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[OldName("tragem_book")]
 public partial class TragemBook
 {
-    [Key]
-    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [OldName("book")]
-    public string Book { get; set; }
+    public string Book { get; set; }//TODO: shoud be Name 
 
-    [OldName("Field_q")]
     public string FieldQ { get; set; }
-
 }

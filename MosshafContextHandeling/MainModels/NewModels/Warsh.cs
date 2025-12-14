@@ -9,19 +9,13 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Keyless]
-//[Table("warsh", Schema = "quran_quran2")]
-[OldName("warsh")]
 public partial class Warsh
 {
-    [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("page_id")]
     [StringLength(100)]
     public string PageId { get; set; }
 
-    [OldName("image")]
     [StringLength(100)]
     public string Image { get; set; }
 }

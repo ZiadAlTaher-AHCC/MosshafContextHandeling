@@ -9,18 +9,11 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[OldName("asbab_book")]
 public partial class AsbabBook
 {
-    [OldName("id")]
-    [Key]
     public int Id { get; set; }
 
-    [OldName("book")]
-    [Required]
     public string Book { get; set; }
 
-    [OldName("Field_q")]
-    [Required]
     public string MappedColumnName { get; set; }
 }

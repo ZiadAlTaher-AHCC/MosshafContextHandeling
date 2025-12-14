@@ -8,22 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
-[OldName("ahkam_book")]
 public partial class AhkamBook
 {
-    [OldName("id")]
-    [Key]
  
     public int Id { get; set; }
 
-    [OldName("book")]
-    [Required]
- 
     public string BookName { get; set; }
 
-    [OldName("Field_q")]
-    [Required]
-  
     public string MappedColumnName  { get; set; } 
 
 }

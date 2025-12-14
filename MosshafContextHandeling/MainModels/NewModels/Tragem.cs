@@ -9,166 +9,110 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-[Keyless]
-//[Table("tragem", Schema = "quran_quran2")]
-[OldName("tragem")]
 public partial class Tragem
 {
-    [OldName("id")]
     public int? Id { get; set; }
 
-    [OldName("QuranID")]
     public int? QuranId { get; set; } // navigation key to Quran table
 
     public string Verse { get; set; }
 
-    [OldName("GVerse")]
     public string Gverse { get; set; }
 
     public string English { get; set; }
 
-    [OldName("english2")]
     public string English2 { get; set; }
 
-    [OldName("Eng_Ahmed_Ali")]
     public string EngAhmedAli { get; set; }
 
-    [OldName("Eng_Yusuf_Ali")]
     public string EngYusufAli { get; set; }
 
-    [OldName("Eng_Qarai")]
     public string EngQarai { get; set; }
 
-    [OldName("Eng_Ahmed_Raza_Khan")]
     public string EngAhmedRazaKhan { get; set; }
 
-    [OldName("Eng_Arberry")]
     public string EngArberry { get; set; }
 
-    [OldName("Eng_Asad")]
     public string EngAsad { get; set; }
 
-    [OldName("Eng_Daryabadi")]
     public string EngDaryabadi { get; set; }
 
-    [OldName("Eng_Hilali_And_Khan")]
     public string EngHilaliAndKhan { get; set; }
 
-    [OldName("Eng_ClearQuran_God")]
     public string EngClearQuranGod { get; set; }
 
-    [OldName("Eng_ClearQuran_Allah")]
     public string EngClearQuranAllah { get; set; }
 
-    [OldName("Eng_Community_God")]
     public string EngCommunityGod { get; set; }
 
-    [OldName("Eng_Community_Allah")]
     public string EngCommunityAllah { get; set; }
 
-    [OldName("Eng_Khattab")]
     public string EngKhattab { get; set; }
 
-    [OldName("Eng_Maududi")]
     public string EngMaududi { get; set; }
 
-    [OldName("Eng_Mubarakpuri")]
     public string EngMubarakpuri { get; set; }
 
-    [OldName("Eng_Pickthall")]
     public string EngPickthall { get; set; }
 
-    [OldName("Eng_Sarwar")]
     public string EngSarwar { get; set; }
 
-    [OldName("Eng_Qaribullah_And_Darwish")]
     public string EngQaribullahAndDarwish { get; set; }
-    [OldName("Germany")]
     public string Germany { get; set; }
-    [OldName("PageNo")]
     public int? PageNo { get; set; }
-    [OldName("PartNo")]
     public int? PartNo { get; set; }
-    [OldName("VerseNo")]
     public int? VerseNo { get; set; }
-    [OldName("SuraName")]
     public string SuraName { get; set; }
-    [OldName("SuraNo")]
     public int? SuraNo { get; set; } // navigation property to Sura
 
-    [OldName("japanese")]
     public string Japanese { get; set; }
 
-    [OldName("chinese")]
     public string Chinese { get; set; }
 
-    [OldName("italy")]
     public string Italy { get; set; }
 
-    [OldName("fr")]
     public string Fr { get; set; }
 
-    [OldName("fr2")]
     public string Fr2 { get; set; } // todo : what is the difference between fr and fr2?
 
-    [OldName("indo")]
     public string Indo { get; set; }
 
-    [OldName("kory")]
     public string Kory { get; set; }
 
-    [OldName("sa7ly")]
     public string Sahly { get; set; }
 
-    [OldName("rusha")]
     public string Rusha { get; set; }
 
-    [OldName("alb")]
     public string Alb { get; set; }
 
-    [OldName("sp")]
     public string Sp { get; set; }
 
-    [OldName("hendi")]
     public string Hendi { get; set; }
 
-    [OldName("malawy")]
     public string Malawy { get; set; }
 
-    [OldName("polg")]
     public string Polg { get; set; }
 
-    [OldName("polsh")]
     public string Polsh { get; set; }
 
-    [OldName("posna")]
     public string Posna { get; set; }
 
-    [OldName("ty")]
     public string Ty { get; set; }
 
-    [OldName("fares")]
     public string Fares { get; set; }
 
-    [OldName("torki")]
     public string Torki { get; set; }
 
-    [OldName("azer")]
     public string Azer { get; set; }
 
-    [OldName("braz")]
     public string Braz { get; set; }
 
-    [OldName("sere")]
     public string Sere { get; set; }
 
-    [OldName("fin")]
     public string Fin { get; set; }
 
-    [OldName("english_shaker")]
     public string EnglishShaker { get; set; }
 
-    [OldName("german2")]
     public string German2 { get; set; }
 
     //[OldName("fh")]

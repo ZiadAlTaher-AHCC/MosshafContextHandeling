@@ -9,21 +9,13 @@ using MosshafContextHandeling.Helpers;
 
 namespace MosshafContextHandeling.MainModels.NewModels;
 
-//[Table("t_lang", Schema = "quran_quran2")]
-[Index("Id", Name = "id")]
-[OldName("t_lang")]
 public partial class TLang
 {
-    [OldName("lang")]
     public string Lang { get; set; }
 
-    [OldName("sura")]
     public string Sura { get; set; }
 
-    [OldName("name")]
     public string Name { get; set; }
 
-    [Key]
-    [OldName("id")]
     public int Id { get; set; }
 }
